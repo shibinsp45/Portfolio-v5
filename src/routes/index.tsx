@@ -11,10 +11,10 @@ import p4 from "@/assets/project-4.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alex Rivera — Lead Product Designer" },
-      { name: "description", content: "Portfolio of Alex Rivera, a lead product designer crafting GenAI products with clarity and intention." },
-      { property: "og:title", content: "Alex Rivera — Lead Product Designer" },
-      { property: "og:description", content: "Portfolio of Alex Rivera, a lead product designer crafting GenAI products with clarity and intention." },
+      { title: "Shibin SP — Lead Product Designer" },
+      { name: "description", content: "Portfolio of Shibin SP, a lead product designer crafting GenAI products with clarity and intention." },
+      { property: "og:title", content: "Shibin SP — Lead Product Designer" },
+      { property: "og:description", content: "Portfolio of Shibin SP, a lead product designer crafting GenAI products with clarity and intention." },
     ],
   }),
   component: Portfolio,
@@ -46,7 +46,7 @@ function Portfolio() {
       <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 hidden md:flex items-center gap-1 rounded-full border border-border bg-card/80 px-2 py-2 shadow-sm backdrop-blur-md">
         <a href="#top" className="flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 hover:bg-secondary">
           <img src={avatar} alt="" className="size-7 rounded-full object-cover" />
-          <span className="text-sm font-medium">Alex Rivera</span>
+          <span className="text-sm font-medium">Shibin SP</span>
         </a>
         {[
           ["Work", "#work"],
@@ -73,7 +73,7 @@ function Portfolio() {
             <h2 className="font-display mt-8 text-[14vw] md:text-[8.5rem] leading-[0.95] tracking-tight">
               <span>Hi </span>
               <Sparkles className="inline-block size-[0.7em] -translate-y-[0.15em] text-accent" />
-              <span> I'm Alex.</span>
+              <span> I'm Shibin.</span>
               <br />
               <span className="text-faded">Lead Product</span>{" "}
               <span className="text-faded">Designer</span>
@@ -244,7 +244,7 @@ function Portfolio() {
         </section>
 
         <footer className="border-t border-border px-6 py-10 text-center text-xs text-muted-foreground">
-          Designed with intention · © 2026 Alex Rivera
+          Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
     </div>
