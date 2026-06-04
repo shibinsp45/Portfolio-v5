@@ -59,44 +59,9 @@ function Portfolio() {
         <a href="#connect" className="ml-1 rounded-full border border-border px-4 py-1.5 text-sm font-medium hover:bg-secondary">Connect</a>
       </nav>
 
-      {/* Profile sidebar (desktop) */}
-      <aside className="fixed left-0 top-0 z-40 hidden lg:flex h-screen w-72 flex-col border-r border-border bg-background p-6">
-        <div className="relative">
-          <img src={avatar} alt="Alex Rivera" className="size-40 rounded-full object-cover" />
-          <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-card border border-border px-3 py-1 text-xs font-medium text-[color:var(--ring)] shadow-sm whitespace-nowrap">
-            <Briefcase className="size-3.5" /> Open to Work
-          </span>
-        </div>
-        <h1 className="mt-8 font-display text-3xl">Alex Rivera</h1>
-        <div className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
-          <span>@alexrivera</span>
-          <span>·</span>
-          <MapPin className="size-3.5" />
-          <span>Malaysia</span>
-        </div>
-        <p className="mt-2 text-sm font-medium">Lead Product Designer</p>
-
-        <div className="mt-6 text-xs text-muted-foreground">11 years experience includes:</div>
-        <div className="mt-3 flex items-center gap-2">
-          <div className="grid size-9 place-items-center rounded-lg bg-primary text-primary-foreground font-display text-lg">V</div>
-          <div className="grid size-9 place-items-center rounded-lg bg-accent text-accent-foreground font-display text-lg">A</div>
-          <div className="grid size-9 place-items-center rounded-lg bg-secondary text-secondary-foreground font-display text-lg">K</div>
-        </div>
-
-        <div className="mt-8 flex gap-2">
-          <button className="flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90">
-            <MessageCircle className="size-4" /> Message
-          </button>
-          <button aria-label="Bookmark" className="grid size-10 place-items-center rounded-full border border-border hover:bg-secondary">
-            <Bookmark className="size-4" />
-          </button>
-        </div>
-
-        <div className="mt-auto text-xs text-muted-foreground">© 2026 Alex's Studio</div>
-      </aside>
-
       {/* Main content */}
-      <main id="top" className="lg:pl-72">
+      <main id="top">
+
         {/* HERO */}
         <section className="relative overflow-hidden px-6 pt-28 pb-20 md:pt-36 md:pb-28">
           <div className="mx-auto max-w-6xl">
