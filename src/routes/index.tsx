@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Briefcase, MessageCircle, Bookmark, ArrowUpRight, Sparkles } from "lucide-react";
-import heroStack from "@/assets/hero-stack.png";
+
 import avatar from "@/assets/avatar.jpg";
 import about from "@/assets/about.jpg";
 import p1 from "@/assets/project-1.jpg";
