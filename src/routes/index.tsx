@@ -1,5 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Briefcase, MessageCircle, Bookmark, ArrowUpRight, Sparkles } from "lucide-react";
+import { MapPin, Briefcase, MessageCircle, Bookmark, ArrowUpRight } from "lucide-react";
+import type { SVGProps } from "react";
+
+function Sparkles(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M14 4 C14.5 9 16 11 21 11 C16 11 14.5 13 14 18 C13.5 13 12 11 7 11 C12 11 13.5 9 14 4 Z" />
+      <path d="M25 4 L25 9 M22.5 6.5 L27.5 6.5" />
+      <circle cx="8" cy="22" r="1.4" />
+    </svg>
+  );
+}
 
 import avatar from "@/assets/avatar.jpg";
 import about from "@/assets/about.jpg";
