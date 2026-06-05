@@ -71,13 +71,13 @@ function Portfolio() {
               Open to collaborate
             </div>
 
-            <h2 className="font-display mt-8 text-[14vw] md:text-[8.5rem] leading-[0.95] tracking-tight">
+            <h2 className="mt-8 text-[14vw] md:text-[7rem] leading-[1] tracking-[-0.04em] font-semibold">
               <span>Hi </span>
-              <Sparkles className="inline-block size-[0.7em] -translate-y-[0.15em] text-accent" />
+              <Sparkles className="inline-block size-[0.55em] -translate-y-[0.1em] text-foreground" />
               <span> I'm Shibin.</span>
               <br />
-              <span className="text-faded">Lead Product</span>{" "}
-              <span className="text-faded">Designer</span>
+              <span>Lead Product</span>{" "}
+              <span>Designer</span>
             </h2>
 
             <p className="mt-10 max-w-md text-base text-muted-foreground">
