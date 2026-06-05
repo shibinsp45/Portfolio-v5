@@ -99,13 +99,6 @@ function Portfolio() {
               I'm a lead product designer who finds the signal in the noise — then makes it pretty.
             </p>
 
-            <img
-              src={heroStack}
-              alt="Layered product UI screenshots"
-              width={1280}
-              height={960}
-              className="pointer-events-none absolute right-[-6%] top-24 hidden md:block w-[55%] max-w-[720px] float-slow drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)]"
-            />
           </div>
         </section>
 
