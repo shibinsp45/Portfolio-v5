@@ -80,18 +80,32 @@ function Portfolio() {
         {/* HERO */}
         <section className="relative overflow-hidden px-6 pt-28 pb-20 md:pt-36 md:pb-28">
           <div className="mx-auto max-w-6xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
+            {/* Avatar pill */}
+            <div className="flex justify-center">
+              <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card/60 px-2 py-1.5 backdrop-blur">
+                <img src={avatar} alt="" className="size-8 rounded-full object-cover" />
+                <span className="text-sm font-semibold">Shibin SP</span>
+                <span className="flex items-center gap-1 pr-2">
+                  <span className="size-1.5 rounded-full bg-muted-foreground/60" />
+                  <span className="size-2 rounded-full bg-foreground" />
+                  <span className="size-1.5 rounded-full bg-muted-foreground/60" />
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-12 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
               <span className="size-2 rounded-full bg-[color:var(--success)]" />
-              Open to collaborate
+              Open to opportunities
             </div>
 
             <h2 className="mt-8 text-[14vw] md:text-[7rem] leading-[1] tracking-[-0.04em] font-semibold">
-              <span>Hi </span>
-              <Sparkles className="inline-block size-[0.55em] -translate-y-[0.1em] text-foreground" />
-              <span> I'm Shibin.</span>
+              <span className="text-muted-foreground">
+                Hi{" "}
+                <Sparkles className="inline-block size-[0.55em] -translate-y-[0.1em]" />
+                {" "}I'm Shibin.
+              </span>
               <br />
-              <span>Lead Product</span>{" "}
-              <span>Designer</span>
+              <span>Lead Product Designer</span>
             </h2>
 
             <p className="mt-10 max-w-md text-base text-muted-foreground">
