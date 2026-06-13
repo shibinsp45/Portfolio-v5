@@ -37,25 +37,25 @@
 
 :root {
   --radius: 1.25rem;
-  --background: oklch(0.12 0.005 80);
+  --background: oklch(0.05 0.005 80);
   --foreground: oklch(0.96 0.005 85);
-  --card: oklch(0.16 0.01 80);
+  --card: oklch(0.10 0.01 80);
   --card-foreground: oklch(0.96 0.005 85);
-  --popover: oklch(0.16 0.01 80);
+  --popover: oklch(0.10 0.01 80);
   --popover-foreground: oklch(0.96 0.005 85);
   --primary: oklch(0.96 0.005 85);
-  --primary-foreground: oklch(0.12 0.005 80);
-  --secondary: oklch(0.22 0.008 85);
+  --primary-foreground: oklch(0.05 0.005 80);
+  --secondary: oklch(0.14 0.008 85);
   --secondary-foreground: oklch(0.96 0.005 85);
-  --muted: oklch(0.22 0.008 85);
+  --muted: oklch(0.14 0.008 85);
   --muted-foreground: oklch(0.6 0.012 80);
   --accent: oklch(0.78 0.16 55);
-  --accent-foreground: oklch(0.12 0.005 80);
+  --accent-foreground: oklch(0.05 0.005 80);
   --success: oklch(0.72 0.16 150);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.25 0.01 85);
-  --input: oklch(0.25 0.01 85);
+  --border: oklch(0.18 0.01 85);
+  --input: oklch(0.18 0.01 85);
   --ring: oklch(0.6 0.05 80);
 
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
