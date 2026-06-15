@@ -166,8 +166,8 @@ function Portfolio() {
         <section id="about" className="px-6 py-24 md:py-32 bg-card/40 border-y border-border">
           <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div className="space-y-6">
-              <h3 className="font-display text-5xl md:text-6xl leading-[0.95]">
-                Making things with intention,<br /><em className="text-muted-foreground">not just attention.</em>
+              <h3 className="font-display text-5xl md:text-6xl">
+                <span className="text-muted-foreground">Making things with intention,</span><br /><span>not just attention.</span>
               </h3>
               <img src={about} alt="" loading="lazy" className="rounded-2xl w-full object-cover aspect-[3/4] max-w-md" />
               <div className="flex gap-3">
@@ -255,8 +255,8 @@ function Portfolio() {
         {/* CONNECT */}
         <section id="connect" className="px-6 py-24 md:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <h3 className="font-display text-5xl md:text-6xl leading-[0.95]">
-              Curious about my work?<br /><em>Find me on LinkedIn.</em>
+            <h3 className="font-display text-5xl md:text-6xl">
+              <span className="text-muted-foreground">Curious about my work?</span><br /><span>Find me on LinkedIn.</span>
             </h3>
             <p className="mt-6 text-muted-foreground">Always up for a conversation about design, AI, or what you're working on.</p>
             <a href="#" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
