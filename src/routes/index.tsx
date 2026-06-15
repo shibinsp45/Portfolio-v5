@@ -57,21 +57,23 @@ const marqueeItems = ["TUNING MY SUPERBIKE", "ON A WAFFLE DATE", "ORGANIZING FIL
 function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Floating Nav Pill */}
-      <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 hidden md:flex items-center gap-1 rounded-full border border-white/40 bg-white/25 px-2 py-2 shadow-lg shadow-black/5 backdrop-blur-2xl">
-        <a href="#top" className="flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 hover:bg-secondary">
+      {/* Sticky Glass Nav */}
+      <nav className="sticky top-0 z-50 flex w-full items-center justify-between border-b border-white/10 bg-white/10 px-4 py-3 backdrop-blur-2xl md:justify-center md:gap-1 md:rounded-full md:border md:border-white/40 md:bg-white/25 md:px-2 md:py-2 md:shadow-lg md:shadow-black/5">
+        <a href="#top" className="flex items-center gap-2 rounded-full hover:bg-secondary px-2 py-1 md:pl-2 md:pr-3 md:py-1.5">
           <img src={avatar} alt="" className="size-7 rounded-full object-cover" />
           <span className="text-sm font-medium">Shibin SP</span>
         </a>
-        {[
-          ["Work", "#work"],
-          ["About", "#about"],
-          ["Process", "#process"],
-          ["Principles", "#principles"],
-        ].map(([l, h]) => (
-          <a key={h} href={h} className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">{l}</a>
-        ))}
-        <a href="#connect" className="ml-1 rounded-full border border-border px-4 py-1.5 text-sm font-medium hover:bg-secondary">Connect</a>
+        <div className="hidden items-center gap-1 md:flex">
+          {[
+            ["Work", "#work"],
+            ["About", "#about"],
+            ["Process", "#process"],
+            ["Principles", "#principles"],
+          ].map(([l, h]) => (
+            <a key={h} href={h} className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">{l}</a>
+          ))}
+          <a href="#connect" className="ml-1 rounded-full border border-border px-4 py-1.5 text-sm font-medium hover:bg-secondary">Connect</a>
+        </div>
       </nav>
 
       {/* Main content */}
