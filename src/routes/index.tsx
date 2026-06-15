@@ -58,7 +58,7 @@ function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Floating Nav Pill */}
-      <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 hidden md:flex items-center gap-1 rounded-full border border-border bg-card/80 px-2 py-2 shadow-sm backdrop-blur-md">
+      <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 hidden md:flex items-center gap-1 rounded-full border border-white/40 bg-white/25 px-2 py-2 shadow-lg shadow-black/5 backdrop-blur-2xl">
         <a href="#top" className="flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 hover:bg-secondary">
           <img src={avatar} alt="" className="size-7 rounded-full object-cover" />
           <span className="text-sm font-medium">Shibin SP</span>
