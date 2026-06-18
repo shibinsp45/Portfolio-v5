@@ -17,10 +17,6 @@ function Sparkles({ className, ...props }: ImgHTMLAttributes<HTMLImageElement>) 
 
 import avatar from "@/assets/avatar.jpg";
 import about from "@/assets/about.jpg";
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
-import p4 from "@/assets/project-4.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -36,10 +32,12 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { img: p1, title: "FableVerse by VoyceMe", tag: "Gen-AI for the animanga-verse" },
-  { img: p2, title: "Medal.tv", tag: "Built for 8 million gamers who clip, share, compete." },
-  { img: p3, title: "Kaedim 3D", tag: "Turning 2D concept art into game-ready 3D in minutes." },
-  { img: p4, title: "Topsort", tag: "AI ad server platform boosting retail performance." },
+  { img: "https://shibinsp45.lovable.app/projects/invoice-generator.jpg", href: "https://shibinsp45.lovable.app/project/invoice-generator", title: "Billzy — Invoice Generator", tag: "A mobile invoice app — create bills faster, manage your shop better." },
+  { img: "https://shibinsp45.lovable.app/projects/tools-app.png", href: "https://shibinsp45.lovable.app/project/tools-app", title: "Tools — Emergency Service App", tag: "On-demand tools and repair service — we're here to help you." },
+  { img: "https://shibinsp45.lovable.app/projects/fudit-app.png", href: "https://shibinsp45.lovable.app/project/fudit-app", title: "Fudit — AI Food Delivery", tag: "AI-powered food delivery — cravings, delivered to your home." },
+  { img: "https://shibinsp45.lovable.app/projects/fitness-app.jpg", href: "https://shibinsp45.lovable.app/project/fitness-app", title: "GetFit — Fitness Tracker", tag: "Personalized fitness tracking — where fitness meets passion." },
+  { img: "https://shibinsp45.lovable.app/projects/grocery-app.jpg", href: "https://shibinsp45.lovable.app/project/grocery-app", title: "GroPlan — Grocery Planner", tag: "Smart grocery & meal planning — your smart kitchen buddy." },
+  { img: "https://shibinsp45.lovable.app/projects/medicine-vending.png", href: "https://shibinsp45.lovable.app/project/medicine-vending", title: "PROMedic — Emergency Medicine", tag: "Medicine vending — access meds faster during emergencies." },
 ];
 
 const tools = ["Figma", "Framer", "Webflow", "Rive", "Blender", "Trello", "ChatGPT", "Claude"];
@@ -140,7 +138,7 @@ function Portfolio() {
 
             <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {projects.map((p) => (
-                <a key={p.title} href="#" className="group block">
+                <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="group block">
                   <div className="overflow-hidden rounded-2xl bg-card border border-border aspect-[4/3]">
                     <img src={p.img} alt={p.title} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
