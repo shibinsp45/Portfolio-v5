@@ -138,7 +138,7 @@ function Portfolio() {
 
             <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {projects.map((p) => (
-                <a key={p.title} href="#" className="group block">
+                <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="group block">
                   <div className="overflow-hidden rounded-2xl bg-card border border-border aspect-[4/3]">
                     <img src={p.img} alt={p.title} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
