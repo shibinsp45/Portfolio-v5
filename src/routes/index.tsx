@@ -58,7 +58,7 @@ function Portfolio() {
       {/* Sticky Glass Nav */}
       <div className="sticky top-4 z-50 flex justify-center px-4">
         <nav className="flex items-center gap-1 rounded-full border border-white/40 bg-white/25 px-2 py-1.5 shadow-lg shadow-black/5 backdrop-blur-2xl">
-          <a href="#top" className="flex items-center gap-2 rounded-full pl-1 pr-3 py-1 hover:bg-white/30">
+          <a href="#top" className="flex items-center gap-2 rounded-full pl-1 pr-3 py-1 transition-all duration-150 hover:bg-white/30 active:scale-95 active:bg-white/50">
             <img src={avatar} alt="" className="size-7 rounded-full object-cover" />
             <span className="text-sm font-medium">Shibin SP</span>
           </a>
@@ -68,12 +68,13 @@ function Portfolio() {
               ["Process", "#process"],
               ["Principles", "#principles"],
             ].map(([l, h]) => (
-              <a key={h} href={h} className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">{l}</a>
+              <a key={h} href={h} className="px-3 py-1.5 text-sm text-muted-foreground transition-all duration-150 hover:text-foreground active:scale-95 active:text-foreground">{l}</a>
             ))}
-            <a href="#connect" className="ml-1 rounded-full border border-foreground/80 px-4 py-1.5 text-sm font-medium hover:bg-white/30">Connect</a>
+            <a href="#connect" className="ml-1 rounded-full border border-foreground/80 px-4 py-1.5 text-sm font-medium transition-all duration-150 hover:bg-white/30 active:scale-95 active:bg-foreground active:text-background">Connect</a>
           </div>
         </nav>
       </div>
+
 
       {/* Main content */}
       <main id="top">
@@ -81,18 +82,7 @@ function Portfolio() {
         {/* HERO */}
         <section className="relative overflow-hidden px-6 pt-28 pb-20 md:pt-36 md:pb-28">
           <div className="mx-auto max-w-6xl">
-            {/* Avatar pill */}
-            <div className="flex justify-center">
-              <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card/60 px-2 py-1.5 backdrop-blur">
-                <img src={avatar} alt="" className="size-8 rounded-full object-cover" />
-                <span className="text-sm font-semibold">Shibin SP</span>
-                <span className="flex items-center gap-1 pr-2">
-                  <span className="size-1.5 rounded-full bg-muted-foreground/60" />
-                  <span className="size-2 rounded-full bg-foreground" />
-                  <span className="size-1.5 rounded-full bg-muted-foreground/60" />
-                </span>
-              </div>
-            </div>
+
 
             <div className="mt-12 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
               <span className="size-2 rounded-full bg-[color:var(--success)]" />
