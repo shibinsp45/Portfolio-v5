@@ -61,14 +61,13 @@ function Portfolio() {
       <main id="top">
 
         {/* HERO */}
-        <section className="relative overflow-hidden px-6 pt-28 pb-20 md:pt-36 md:pb-28">
+        <section className="relative overflow-hidden px-6 pt-12 pb-20 md:pt-16 md:pb-28">
           <div className="mx-auto max-w-6xl">
-
-
-            <div className="mt-12 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
               <span className="size-2 rounded-full bg-[color:var(--success)]" />
               Open to opportunities
             </div>
+
 
             <h2 className="mt-8 text-[14vw] md:text-[7rem] leading-[1] tracking-[-0.04em] font-semibold">
               <span className="text-muted-foreground">
