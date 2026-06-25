@@ -87,7 +87,7 @@ function Portfolio() {
             </div>
 
 
-            <h2 className="mt-8 text-[64px] leading-[1.05] tracking-[-0.04em] font-semibold">
+            <h2 className="mt-8 text-[32px] md:text-[64px] leading-[1.05] tracking-[-0.04em] font-semibold">
               <span className="text-muted-foreground">
                 Hey{"\u00a0"}
                 <Sparkles className="inline-block size-[0.55em] -translate-y-[0.1em]" />
