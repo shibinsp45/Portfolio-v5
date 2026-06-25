@@ -63,7 +63,7 @@ function Portfolio() {
             <img src={avatar} alt="Shibin SP" className="size-7 rounded-full object-cover" />
             <span className="text-sm font-medium">Shibin SP</span>
           </a>
-          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+          <div className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground">
             <a href="#work" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Work</a>
             <a href="#about" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">About</a>
             <a href="#process" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Process</a>
