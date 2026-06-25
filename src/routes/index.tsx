@@ -103,7 +103,7 @@ function Portfolio() {
         <section id="work" className="px-6 py-24 md:py-32">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-none">
-              Featured<br />Projects <Sparkles className="inline size-[0.6em] text-accent" />
+              My Featured<br />Projects <Sparkles className="inline size-[0.6em] text-accent" />
             </h3>
 
             <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
