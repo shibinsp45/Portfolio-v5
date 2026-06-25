@@ -72,7 +72,7 @@ function Portfolio() {
             <h2 className="mt-8 text-[14vw] md:text-[7rem] leading-[1] tracking-[-0.04em] font-semibold">
               <span className="text-muted-foreground">
                 Hey{"\u00a0"}
-                <Sparkles className="inline-block size-[0.35em] -translate-y-[0.2em]" />
+                <Sparkles className="inline-block size-[0.55em] -translate-y-[0.1em]" />
                 {"\u00a0"}I'm Shibin S P.
               </span>
               <br />
