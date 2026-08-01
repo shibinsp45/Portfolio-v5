@@ -9,7 +9,7 @@ function Sparkles({ className, ...props }: ImgHTMLAttributes<HTMLImageElement>) 
       src={starAsset.url}
       alt=""
       aria-hidden="true"
-      className={`inline-block object-contain mix-blend-multiply ${className ?? ""}`}
+      className={`inline-block object-contain mix-blend-multiply dark:invert dark:mix-blend-screen ${className ?? ""}`}
       {...props}
     />
   );
@@ -17,6 +17,7 @@ function Sparkles({ className, ...props }: ImgHTMLAttributes<HTMLImageElement>) 
 
 import avatar from "@/assets/avatar.jpg";
 import about from "@/assets/about.jpg";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 
 export const Route = createFileRoute("/")({
@@ -58,7 +59,7 @@ function Portfolio() {
 
       {/* Sticky glass navbar */}
       <header className="sticky top-4 z-50 px-4">
-        <nav className="mx-auto flex max-w-3xl items-center justify-between gap-4 rounded-full border border-border/60 bg-white/60 px-3 py-2 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.15)] backdrop-blur-xl">
+        <nav className="mx-auto flex max-w-3xl items-center justify-between gap-4 rounded-full border border-border/60 bg-background/60 px-3 py-2 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.15)] backdrop-blur-xl">
           <a href="#top" className="flex items-center gap-2 pl-1 pr-2">
             <img src={avatar} alt="Shibin SP" className="size-7 rounded-full object-cover" />
             <span className="text-sm font-medium">Shibin SP</span>
@@ -69,9 +70,12 @@ function Portfolio() {
             <a href="#process" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Process</a>
             <a href="#experience" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Experience</a>
           </div>
-          <a href="#connect" className="rounded-full border border-border bg-background px-4 py-1.5 text-sm font-medium transition hover:bg-foreground hover:text-background active:scale-95">
-            Connect
-          </a>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a href="#connect" className="rounded-full border border-border bg-background px-4 py-1.5 text-sm font-medium transition hover:bg-foreground hover:text-background active:scale-95">
+              Connect
+            </a>
+          </div>
         </nav>
       </header>
 
