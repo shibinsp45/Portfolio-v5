@@ -15,9 +15,9 @@ function Sparkles({ className, ...props }: ImgHTMLAttributes<HTMLImageElement>) 
   );
 }
 
-import avatar from "@/assets/avatar.jpg";
 import about from "@/assets/about.jpg";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Navbar } from "@/components/Navbar";
+import { PageLoader } from "@/components/PageLoader";
 
 
 export const Route = createFileRoute("/")({
@@ -56,28 +56,11 @@ const marqueeItems = ["TUNING MY SUPERBIKE", "ON A WAFFLE DATE", "ORGANIZING FIL
 function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageLoader />
 
       {/* Sticky glass navbar */}
-      <header className="sticky top-4 z-50 px-4">
-        <nav className="mx-auto flex max-w-3xl items-center justify-between gap-4 rounded-full border border-border/60 bg-background/60 px-3 py-2 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.15)] backdrop-blur-xl">
-          <a href="#top" className="flex items-center gap-2 pl-1 pr-2">
-            <img src={avatar} alt="Shibin SP" className="size-7 rounded-full object-cover" />
-            <span className="text-sm font-medium">Shibin SP</span>
-          </a>
-          <div className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground">
-            <a href="#work" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Work</a>
-            <a href="#about" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">About</a>
-            <a href="#process" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Process</a>
-            <a href="#experience" className="rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95">Experience</a>
-          </div>
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <a href="#connect" className="rounded-full border border-border bg-background px-4 py-1.5 text-sm font-medium transition hover:bg-foreground hover:text-background active:scale-95">
-              Connect
-            </a>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
+
 
       {/* Main content */}
       <main id="top">
