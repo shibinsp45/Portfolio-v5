@@ -66,7 +66,7 @@ function Portfolio() {
       <main id="top">
 
         {/* HERO */}
-        <section className="relative overflow-hidden px-6 pt-12 pb-20 md:pt-16 md:pb-28">
+        <section className="relative overflow-hidden px-6 pt-20 pb-32 md:pt-36 md:pb-52">
           <div className="mx-auto max-w-6xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
               <span className="size-2 rounded-full bg-[color:var(--success)]" />
