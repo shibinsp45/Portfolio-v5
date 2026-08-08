@@ -93,7 +93,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="stack-animate sticky top-0 z-10 border-y border-border bg-card/50 overflow-hidden py-5">
+        <div className="stack-animate sticky top-0 z-10 border-y border-border bg-card overflow-hidden py-5">
           <div className="marquee text-sm font-medium tracking-[0.2em] text-muted-foreground">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i} className="flex items-center gap-12">
@@ -139,7 +139,7 @@ function Portfolio() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="stack-animate sticky top-0 z-30 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="about" className="stack-animate sticky top-0 z-30 px-6 py-24 md:py-32 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div className="space-y-6">
               <h3 className="font-display text-5xl md:text-6xl">
@@ -209,7 +209,7 @@ function Portfolio() {
         </section>
 
         {/* PRINCIPLES */}
-        <section id="principles" className="stack-animate sticky top-0 z-50 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="principles" className="stack-animate sticky top-0 z-50 px-6 py-24 md:py-32 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               How I think<br />about my work
@@ -241,7 +241,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="stack-animate sticky top-0 z-[70] border-t border-border bg-card/40 px-6 py-10 text-center text-xs text-muted-foreground shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <footer className="stack-animate sticky top-0 z-[70] border-t border-border bg-card px-6 py-10 text-center text-xs text-muted-foreground shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
