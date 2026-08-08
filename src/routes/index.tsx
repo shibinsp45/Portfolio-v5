@@ -105,7 +105,7 @@ function Portfolio() {
         </div>
 
         {/* FEATURED WORK */}
-        <section id="work" className="sticky top-0 z-20 px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="work" className="stack-animate sticky top-0 z-20 px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-none">
               My Featured<br />Projects <Sparkles className="inline size-[0.6em] text-accent" />
@@ -139,7 +139,7 @@ function Portfolio() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="sticky top-0 z-30 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="about" className="stack-animate sticky top-0 z-30 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div className="space-y-6">
               <h3 className="font-display text-5xl md:text-6xl">
@@ -181,7 +181,7 @@ function Portfolio() {
         </section>
 
         {/* PROCESS / TOOLS */}
-        <section id="process" className="sticky top-0 z-40 px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="process" className="stack-animate sticky top-0 z-40 px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               Good design<br />ships and keeps moving
@@ -209,7 +209,7 @@ function Portfolio() {
         </section>
 
         {/* PRINCIPLES */}
-        <section id="principles" className="sticky top-0 z-50 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="principles" className="stack-animate sticky top-0 z-50 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               How I think<br />about my work
@@ -229,7 +229,7 @@ function Portfolio() {
         </section>
 
         {/* CONNECT */}
-        <section id="connect" className="sticky top-0 z-[60] px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="connect" className="stack-animate sticky top-0 z-[60] px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           <div className="mx-auto max-w-3xl text-center">
             <h3 className="font-display text-5xl md:text-6xl">
               <span className="text-muted-foreground">Curious about my work?</span><br /><span>Find me on LinkedIn.</span>
@@ -241,7 +241,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="sticky top-0 z-[70] border-t border-border bg-card/40 px-6 py-10 text-center text-xs text-muted-foreground shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <footer className="stack-animate sticky top-0 z-[70] border-t border-border bg-card/40 px-6 py-10 text-center text-xs text-muted-foreground shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
