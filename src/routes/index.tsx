@@ -235,7 +235,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="sticky top-0 z-[70] min-h-screen border-t border-border bg-card px-6 py-10 text-center text-xs text-muted-foreground shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <footer className="relative z-[70] border-t border-border bg-card px-6 py-12 text-center text-xs text-muted-foreground">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
