@@ -131,43 +131,45 @@ function Portfolio() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="sticky top-0 z-30 min-h-screen px-6 py-24 md:py-32 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
-          <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-            <div className="space-y-6">
-              <h3 className="font-display text-5xl md:text-6xl">
-                <span className="text-muted-foreground">Making things with intention,</span><br /><span>not just attention.</span>
-              </h3>
-              <img src={about} alt="" loading="lazy" className="rounded-2xl w-full object-cover aspect-[3/4] max-w-md" />
-              <div className="flex gap-3">
-                <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">Dribbble</a>
-                <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">LinkedIn</a>
-              </div>
-            </div>
-
-            <div className="space-y-8 text-[15px] leading-relaxed">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">Where I've been</div>
-                <div className="mt-4 divide-y divide-border border-y border-border">
-                  {[
-                    ["VoyceMe", "Lead Product Designer", "2024 — Now"],
-                    ["Kaedim 3D · Awesomic", "Senior Product Designer", "2023 — 2024"],
-                    ["Medal.tv", "Senior Product Designer", "2022"],
-                    ["EY Consulting", "Product Designer", "2018 — 2022"],
-                  ].map(([co, role, when]) => (
-                    <div key={co} className="grid grid-cols-[1fr_auto] gap-4 py-4">
-                      <div>
-                        <div className="font-medium">{co}</div>
-                        <div className="text-sm text-muted-foreground">{role}</div>
-                      </div>
-                      <div className="text-sm text-muted-foreground self-center">{when}</div>
-                    </div>
-                  ))}
+        <section id="about" className="sticky top-0 z-30 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
+          <div className="mx-auto h-full max-w-6xl flex flex-col">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12 flex-1 min-h-0">
+              <div className="flex flex-col gap-4 md:gap-5">
+                <h3 className="font-display text-3xl md:text-4xl leading-[1.05]">
+                  <span className="text-muted-foreground">Making things with intention,</span><br /><span>not just attention.</span>
+                </h3>
+                <img src={about} alt="" loading="lazy" className="rounded-2xl w-full object-cover aspect-[4/3] max-h-[36vh]" />
+                <div className="flex gap-3">
+                  <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">Dribbble</a>
+                  <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">LinkedIn</a>
                 </div>
               </div>
 
-              <p><span className="font-semibold">I've spent over a decade learning that good design is mostly listening.</span> I started in consulting at EY, moved into consumer gaming at Medal, then AI tooling at Kaedim, and now I lead design for GenAI products at VoyceMe.</p>
-              <p><span className="font-semibold">Right now I'm deep in generative AI</span>, designing how millions of people create stories, characters, and worlds with tools that didn't exist years ago. Messy, fast, genuinely new — I like it that way.</p>
-              <p><span className="font-semibold">I care a lot about the small things</span> — the wording on an empty state, the weight of a button press, the rhythm of a flow. That's where trust gets built.</p>
+              <div className="flex flex-col gap-5 md:gap-6 text-[15px] leading-relaxed overflow-y-auto md:overflow-visible">
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">Where I've been</div>
+                  <div className="mt-3 divide-y divide-border border-y border-border">
+                    {[
+                      ["VoyceMe", "Lead Product Designer", "2024 — Now"],
+                      ["Kaedim 3D · Awesomic", "Senior Product Designer", "2023 — 2024"],
+                      ["Medal.tv", "Senior Product Designer", "2022"],
+                      ["EY Consulting", "Product Designer", "2018 — 2022"],
+                    ].map(([co, role, when]) => (
+                      <div key={co} className="grid grid-cols-[1fr_auto] gap-4 py-3">
+                        <div>
+                          <div className="font-medium">{co}</div>
+                          <div className="text-sm text-muted-foreground">{role}</div>
+                        </div>
+                        <div className="text-sm text-muted-foreground self-center">{when}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <p><span className="font-semibold">I've spent over a decade learning that good design is mostly listening.</span> I started in consulting at EY, moved into consumer gaming at Medal, then AI tooling at Kaedim, and now I lead design for GenAI products at VoyceMe.</p>
+                <p><span className="font-semibold">Right now I'm deep in generative AI</span>, designing how people create stories, characters, and worlds with tools that didn't exist years ago.</p>
+                <p><span className="font-semibold">I care about the small things</span> — the wording on an empty state, the weight of a button press, the rhythm of a flow. That's where trust gets built.</p>
+              </div>
             </div>
           </div>
         </section>
