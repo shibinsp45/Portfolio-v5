@@ -93,7 +93,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="sticky top-0 z-10 border-y border-border bg-card/50 overflow-hidden py-5">
+        <div className="stack-animate sticky top-0 z-10 border-y border-border bg-card/50 overflow-hidden py-5">
           <div className="marquee text-sm font-medium tracking-[0.2em] text-muted-foreground">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i} className="flex items-center gap-12">
