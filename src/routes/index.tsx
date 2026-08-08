@@ -93,7 +93,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="sticky top-0 z-10 min-h-screen border-y border-border bg-card overflow-hidden py-5">
+        <div className="stack-animate sticky top-0 z-10 min-h-screen border-y border-border bg-card overflow-hidden py-5">
           <div className="marquee text-sm font-medium tracking-[0.2em] text-muted-foreground">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i} className="flex items-center gap-12">
@@ -105,7 +105,7 @@ function Portfolio() {
         </div>
 
         {/* FEATURED WORK */}
-        <section id="work" className="sticky top-0 z-20 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
+        <section id="work" className="stack-animate sticky top-0 z-20 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto h-full max-w-6xl flex flex-col">
             <h3 className="font-display text-4xl md:text-5xl leading-none">
               My Featured Projects <Sparkles className="inline size-[0.5em] text-accent" />
@@ -131,7 +131,7 @@ function Portfolio() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="sticky top-0 z-30 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
+        <section id="about" className="stack-animate sticky top-0 z-30 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto h-full max-w-6xl flex flex-col">
             <div className="grid md:grid-cols-2 gap-6 md:gap-12 flex-1 min-h-0">
               <div className="flex flex-col gap-4 md:gap-5">
@@ -175,7 +175,7 @@ function Portfolio() {
         </section>
 
         {/* PROCESS / TOOLS */}
-        <section id="process" className="sticky top-0 z-40 min-h-screen px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="process" className="stack-animate sticky top-0 z-40 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               Good design<br />ships and keeps moving
@@ -203,7 +203,7 @@ function Portfolio() {
         </section>
 
         {/* PRINCIPLES */}
-        <section id="principles" className="sticky top-0 z-50 min-h-screen px-6 py-24 md:py-32 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="principles" className="stack-animate sticky top-0 z-50 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               How I think<br />about my work
@@ -223,7 +223,7 @@ function Portfolio() {
         </section>
 
         {/* CONNECT */}
-        <section id="connect" className="sticky top-0 z-[60] min-h-screen px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="connect" className="stack-animate sticky top-0 z-[60] min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto max-w-3xl text-center">
             <h3 className="font-display text-5xl md:text-6xl">
               <span className="text-muted-foreground">Curious about my work?</span><br /><span>Find me on LinkedIn.</span>
