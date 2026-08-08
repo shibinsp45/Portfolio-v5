@@ -105,35 +105,27 @@ function Portfolio() {
         </div>
 
         {/* FEATURED WORK */}
-        <section id="work" className="sticky top-0 z-20 min-h-screen px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
-          <div className="mx-auto max-w-6xl">
-            <h3 className="font-display text-5xl md:text-7xl leading-none">
-              My Featured<br />Projects <Sparkles className="inline size-[0.6em] text-accent" />
+        <section id="work" className="sticky top-0 z-20 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
+          <div className="mx-auto h-full max-w-6xl flex flex-col">
+            <h3 className="font-display text-4xl md:text-5xl leading-none">
+              My Featured Projects <Sparkles className="inline size-[0.5em] text-accent" />
             </h3>
 
-            <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 flex-1 min-h-0">
               {projects.map((p) => (
-                <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="overflow-hidden rounded-2xl bg-card border border-border aspect-[4/3]">
+                <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="group block flex flex-col">
+                  <div className="overflow-hidden rounded-xl bg-card border border-border aspect-[4/3] flex-1">
                     <img src={p.img} alt={p.title} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <div className="mt-5 flex items-start justify-between gap-6">
+                  <div className="mt-3 flex items-start justify-between gap-3">
                     <div>
-                      <h4 className="font-display text-2xl">{p.title}</h4>
-                      <p className="mt-1 text-sm text-muted-foreground max-w-md">{p.tag}</p>
+                      <h4 className="font-display text-base md:text-lg leading-tight">{p.title}</h4>
+                      <p className="mt-0.5 text-xs md:text-sm text-muted-foreground line-clamp-1">{p.tag}</p>
                     </div>
-                    <span className="mt-1 inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium underline-offset-4 group-hover:underline">
-                      Peek inside <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </span>
+                    <ArrowUpRight className="mt-0.5 size-3.5 md:size-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
                 </a>
               ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <a href="#" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium hover:bg-secondary">
-                View all my projects <ArrowUpRight className="size-4" />
-              </a>
             </div>
           </div>
         </section>
