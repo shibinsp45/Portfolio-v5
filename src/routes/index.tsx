@@ -93,7 +93,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="stack-animate sticky top-0 z-10 border-y border-border bg-card/50 overflow-hidden py-5">
+        <div className="stack-animate sticky top-0 z-10 min-h-screen border-y border-border bg-card overflow-hidden py-5">
           <div className="marquee text-sm font-medium tracking-[0.2em] text-muted-foreground">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i} className="flex items-center gap-12">
@@ -105,83 +105,77 @@ function Portfolio() {
         </div>
 
         {/* FEATURED WORK */}
-        <section id="work" className="stack-animate sticky top-0 z-20 px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
-          <div className="mx-auto max-w-6xl">
-            <h3 className="font-display text-5xl md:text-7xl leading-none">
-              My Featured<br />Projects <Sparkles className="inline size-[0.6em] text-accent" />
+        <section id="work" className="stack-animate sticky top-0 z-20 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
+          <div className="mx-auto h-full max-w-6xl flex flex-col">
+            <h3 className="font-display text-4xl md:text-5xl leading-none">
+              My Featured Projects <Sparkles className="inline size-[0.5em] text-accent" />
             </h3>
 
-            <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 flex-1 min-h-0">
               {projects.map((p) => (
-                <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="overflow-hidden rounded-2xl bg-card border border-border aspect-[4/3]">
+                <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="group block flex flex-col">
+                  <div className="overflow-hidden rounded-xl bg-card border border-border aspect-[4/3] flex-1">
                     <img src={p.img} alt={p.title} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <div className="mt-5 flex items-start justify-between gap-6">
+                  <div className="mt-3 flex items-start justify-between gap-3">
                     <div>
-                      <h4 className="font-display text-2xl">{p.title}</h4>
-                      <p className="mt-1 text-sm text-muted-foreground max-w-md">{p.tag}</p>
+                      <h4 className="font-display text-base md:text-lg leading-tight">{p.title}</h4>
+                      <p className="mt-0.5 text-xs md:text-sm text-muted-foreground line-clamp-1">{p.tag}</p>
                     </div>
-                    <span className="mt-1 inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium underline-offset-4 group-hover:underline">
-                      Peek inside <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </span>
+                    <ArrowUpRight className="mt-0.5 size-3.5 md:size-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
                 </a>
               ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <a href="#" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium hover:bg-secondary">
-                View all my projects <ArrowUpRight className="size-4" />
-              </a>
             </div>
           </div>
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="stack-animate sticky top-0 z-30 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
-          <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-            <div className="space-y-6">
-              <h3 className="font-display text-5xl md:text-6xl">
-                <span className="text-muted-foreground">Making things with intention,</span><br /><span>not just attention.</span>
-              </h3>
-              <img src={about} alt="" loading="lazy" className="rounded-2xl w-full object-cover aspect-[3/4] max-w-md" />
-              <div className="flex gap-3">
-                <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">Dribbble</a>
-                <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">LinkedIn</a>
-              </div>
-            </div>
-
-            <div className="space-y-8 text-[15px] leading-relaxed">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">Where I've been</div>
-                <div className="mt-4 divide-y divide-border border-y border-border">
-                  {[
-                    ["VoyceMe", "Lead Product Designer", "2024 — Now"],
-                    ["Kaedim 3D · Awesomic", "Senior Product Designer", "2023 — 2024"],
-                    ["Medal.tv", "Senior Product Designer", "2022"],
-                    ["EY Consulting", "Product Designer", "2018 — 2022"],
-                  ].map(([co, role, when]) => (
-                    <div key={co} className="grid grid-cols-[1fr_auto] gap-4 py-4">
-                      <div>
-                        <div className="font-medium">{co}</div>
-                        <div className="text-sm text-muted-foreground">{role}</div>
-                      </div>
-                      <div className="text-sm text-muted-foreground self-center">{when}</div>
-                    </div>
-                  ))}
+        <section id="about" className="stack-animate sticky top-0 z-30 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
+          <div className="mx-auto h-full max-w-6xl flex flex-col">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12 flex-1 min-h-0">
+              <div className="flex flex-col gap-4 md:gap-5">
+                <h3 className="font-display text-3xl md:text-4xl leading-[1.05]">
+                  <span className="text-muted-foreground">Making things with intention,</span><br /><span>not just attention.</span>
+                </h3>
+                <img src={about} alt="" loading="lazy" className="rounded-2xl w-full object-cover aspect-[4/3] max-h-[36vh]" />
+                <div className="flex gap-3">
+                  <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">Dribbble</a>
+                  <a href="#" className="rounded-full border border-border px-4 py-2 text-sm hover:bg-secondary">LinkedIn</a>
                 </div>
               </div>
 
-              <p><span className="font-semibold">I've spent over a decade learning that good design is mostly listening.</span> I started in consulting at EY, moved into consumer gaming at Medal, then AI tooling at Kaedim, and now I lead design for GenAI products at VoyceMe.</p>
-              <p><span className="font-semibold">Right now I'm deep in generative AI</span>, designing how millions of people create stories, characters, and worlds with tools that didn't exist years ago. Messy, fast, genuinely new — I like it that way.</p>
-              <p><span className="font-semibold">I care a lot about the small things</span> — the wording on an empty state, the weight of a button press, the rhythm of a flow. That's where trust gets built.</p>
+              <div className="flex flex-col gap-5 md:gap-6 text-[15px] leading-relaxed overflow-y-auto md:overflow-visible">
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">Where I've been</div>
+                  <div className="mt-3 divide-y divide-border border-y border-border">
+                    {[
+                      ["VoyceMe", "Lead Product Designer", "2024 — Now"],
+                      ["Kaedim 3D · Awesomic", "Senior Product Designer", "2023 — 2024"],
+                      ["Medal.tv", "Senior Product Designer", "2022"],
+                      ["EY Consulting", "Product Designer", "2018 — 2022"],
+                    ].map(([co, role, when]) => (
+                      <div key={co} className="grid grid-cols-[1fr_auto] gap-4 py-3">
+                        <div>
+                          <div className="font-medium">{co}</div>
+                          <div className="text-sm text-muted-foreground">{role}</div>
+                        </div>
+                        <div className="text-sm text-muted-foreground self-center">{when}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <p><span className="font-semibold">I've spent over a decade learning that good design is mostly listening.</span> I started in consulting at EY, moved into consumer gaming at Medal, then AI tooling at Kaedim, and now I lead design for GenAI products at VoyceMe.</p>
+                <p><span className="font-semibold">Right now I'm deep in generative AI</span>, designing how people create stories, characters, and worlds with tools that didn't exist years ago.</p>
+                <p><span className="font-semibold">I care about the small things</span> — the wording on an empty state, the weight of a button press, the rhythm of a flow. That's where trust gets built.</p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* PROCESS / TOOLS */}
-        <section id="process" className="stack-animate sticky top-0 z-40 px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="process" className="stack-animate sticky top-0 z-40 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               Good design<br />ships and keeps moving
@@ -209,7 +203,7 @@ function Portfolio() {
         </section>
 
         {/* PRINCIPLES */}
-        <section id="principles" className="stack-animate sticky top-0 z-50 px-6 py-24 md:py-32 bg-card/40 border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="principles" className="stack-animate sticky top-0 z-50 min-h-screen md:h-screen px-6 py-12 md:py-16 bg-card border-y border-border shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto max-w-6xl">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
               How I think<br />about my work
@@ -229,7 +223,7 @@ function Portfolio() {
         </section>
 
         {/* CONNECT */}
-        <section id="connect" className="stack-animate sticky top-0 z-[60] px-6 py-24 md:py-32 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <section id="connect" className="stack-animate sticky top-0 z-[60] min-h-screen md:h-screen px-6 py-12 md:py-16 bg-background shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)] overflow-hidden">
           <div className="mx-auto max-w-3xl text-center">
             <h3 className="font-display text-5xl md:text-6xl">
               <span className="text-muted-foreground">Curious about my work?</span><br /><span>Find me on LinkedIn.</span>
@@ -241,7 +235,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="stack-animate sticky top-0 z-[70] border-t border-border bg-card/40 px-6 py-10 text-center text-xs text-muted-foreground shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.15)]">
+        <footer className="relative z-[70] border-t border-border bg-card px-6 py-12 text-center text-xs text-muted-foreground">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
