@@ -129,13 +129,10 @@
   }
   @keyframes stack-card {
     0% {
-      transform: translateY(80px) scale(0.96);
-    }
-    25% {
-      transform: translateY(0) scale(1);
+      transform: translateY(80px);
     }
     100% {
-      transform: translateY(0) scale(1);
+      transform: translateY(0);
     }
   }
   .stack-animate {
