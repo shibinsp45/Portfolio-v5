@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MoreHorizontal } from "lucide-react";
+import { MoreHorizontal, ArrowUpRight } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -7,18 +7,36 @@ const links = [
   { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
   { href: "#process", label: "Process" },
-  { href: "#experience", label: "Experience" },
+  { href: "#principles", label: "Principles" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [active, setActive] = useState<string>("#work");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const ids = links.map((l) => l.href.slice(1));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(`#${e.target.id}`);
+        });
+      },
+      { threshold: 0.4 },
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+    return () => io.disconnect();
   }, []);
 
   const collapsed = scrolled && !hovered;
@@ -30,14 +48,17 @@ export function Navbar() {
         onMouseLeave={() => setHovered(false)}
         onFocus={() => setHovered(true)}
         onBlur={() => setHovered(false)}
-        className={`mx-auto flex items-center justify-between gap-3 rounded-full border border-border/60 bg-background/60 py-2 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.25)] backdrop-blur-xl transition-all duration-500 ease-out ${
-          collapsed ? "max-w-[240px] px-2" : "max-w-3xl px-3"
+        className={`glass mx-auto flex items-center justify-between gap-3 rounded-full border border-border/70 py-2 shadow-[0_12px_40px_-18px_var(--glow)] transition-all duration-500 ease-out ${
+          collapsed ? "max-w-[220px] px-2" : "max-w-3xl px-3"
         }`}
       >
         <a href="#top" className="flex min-w-0 items-center gap-2 pl-1">
-          <img src={avatar} alt="Shibin SP" className="size-7 shrink-0 rounded-full object-cover" />
+          <span className="relative grid shrink-0 place-items-center">
+            <img src={avatar} alt="Shibin SP" className="size-7 rounded-full object-cover" />
+            <span className="pulse-ring absolute inset-0 rounded-full border border-[color:var(--brand)]" />
+          </span>
           <span
-            className={`overflow-hidden whitespace-nowrap text-sm font-medium transition-all duration-500 ${
+            className={`overflow-hidden whitespace-nowrap font-display text-sm transition-all duration-500 ${
               collapsed ? "max-w-0 opacity-0" : "max-w-[140px] opacity-100"
             }`}
           >
@@ -54,9 +75,14 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="whitespace-nowrap rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95"
+              className={`relative whitespace-nowrap rounded-full px-3 py-1.5 transition hover:text-foreground active:scale-95 ${
+                active === l.href ? "text-foreground" : ""
+              }`}
             >
               {l.label}
+              {active === l.href && (
+                <span className="absolute inset-x-3 -bottom-0.5 h-px bg-[color:var(--brand)]" />
+              )}
             </a>
           ))}
         </div>
@@ -71,9 +97,10 @@ export function Navbar() {
           </div>
           <a
             href="#connect"
-            className="whitespace-nowrap rounded-full border border-border bg-background px-4 py-1.5 text-sm font-medium transition hover:bg-foreground hover:text-background active:scale-95"
+            className="group inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-4 py-1.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
           >
             Connect
+            <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <span
             aria-hidden="true"
