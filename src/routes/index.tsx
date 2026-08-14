@@ -165,7 +165,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="stack-animate sticky top-0 z-10 grid min-h-screen place-items-center overflow-hidden border-y border-border bg-card">
+        <div className="relative grid place-items-center overflow-hidden border-y border-border bg-card py-20 md:py-28">
           <div className="grid-bg absolute inset-0 opacity-50" />
           <div className="relative flex w-full flex-col gap-8">
             <div className="px-6 text-center">
@@ -196,9 +196,9 @@ function Portfolio() {
         {/* FEATURED WORK */}
         <section
           id="work"
-          className="stack-animate sticky top-0 z-20 min-h-screen overflow-hidden bg-background px-6 py-12 shadow-[0_-30px_60px_-30px_var(--glow)] md:h-screen md:py-16"
+          className="relative overflow-hidden bg-background px-6 py-20 md:py-28"
         >
-          <div className="mx-auto flex h-full max-w-6xl flex-col">
+          <div className="mx-auto flex max-w-6xl flex-col">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <SectionLabel>Selected work</SectionLabel>
@@ -211,17 +211,17 @@ function Portfolio() {
               </span>
             </div>
 
-            <div className="mt-8 grid min-h-0 flex-1 grid-cols-2 gap-4 md:mt-10 md:grid-cols-3 md:gap-5">
+            <div className="mt-8 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-3 md:gap-5">
               {projects.map((p, i) => (
-                <Reveal key={p.title} delay={i * 70} className="flex min-h-0">
-                  <TiltCard className="group flex w-full min-h-0 flex-col">
+                <Reveal key={p.title} delay={i * 70} className="flex">
+                  <TiltCard className="group flex w-full flex-col">
                     <a
                       href={p.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex min-h-0 flex-1 flex-col"
+                      className="flex flex-1 flex-col"
                     >
-                      <div className="relative min-h-0 flex-1 overflow-hidden rounded-2xl border border-border bg-card transition duration-500 group-hover:border-[color:var(--brand)] group-hover:brand-glow">
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card transition duration-500 group-hover:border-[color:var(--brand)] group-hover:brand-glow">
                         <img
                           src={p.img}
                           alt={p.title}
@@ -256,10 +256,10 @@ function Portfolio() {
         {/* ABOUT */}
         <section
           id="about"
-          className="stack-animate sticky top-0 z-30 min-h-screen overflow-hidden border-y border-border bg-card px-6 py-12 shadow-[0_-30px_60px_-30px_var(--glow)] md:h-screen md:py-16"
+          className="relative overflow-hidden border-y border-border bg-card px-6 py-20 md:py-28"
         >
-          <div className="mx-auto flex h-full max-w-6xl flex-col">
-            <div className="grid min-h-0 flex-1 gap-6 md:grid-cols-2 md:gap-12">
+          <div className="mx-auto flex max-w-6xl flex-col">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-12">
               <div className="flex flex-col gap-4 md:gap-5">
                 <SectionLabel>About</SectionLabel>
                 <h2 className="font-display text-3xl leading-[1.05] md:text-4xl">
@@ -272,7 +272,7 @@ function Portfolio() {
                     src={about}
                     alt="Shibin SP at work"
                     loading="lazy"
-                    className="max-h-[34vh] w-full rounded-2xl object-cover"
+                    className="aspect-[4/3] w-full rounded-2xl object-cover"
                   />
                 </TiltCard>
                 <div className="flex gap-3">
@@ -281,7 +281,7 @@ function Portfolio() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-5 overflow-y-auto text-[15px] leading-relaxed md:gap-6 md:overflow-visible">
+              <div className="flex flex-col gap-5 text-[15px] leading-relaxed md:gap-6">
                 <div>
                   <div className="text-[11px] uppercase tracking-[0.35em] text-muted-foreground">
                     Where I've been
@@ -313,10 +313,10 @@ function Portfolio() {
         {/* PROCESS / TOOLS */}
         <section
           id="process"
-          className="stack-animate sticky top-0 z-40 min-h-screen overflow-hidden bg-background px-6 py-12 shadow-[0_-30px_60px_-30px_var(--glow)] md:h-screen md:py-16"
+          className="relative overflow-hidden bg-background px-6 py-20 md:py-28"
         >
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0 opacity-70" />
-          <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-center">
+          <div className="relative mx-auto flex max-w-6xl flex-col">
             <SectionLabel>Process</SectionLabel>
             <h2 className="mt-5 font-display text-5xl leading-[0.95] md:text-7xl">
               Good design
@@ -362,9 +362,9 @@ function Portfolio() {
         {/* PRINCIPLES */}
         <section
           id="principles"
-          className="stack-animate sticky top-0 z-50 min-h-screen overflow-hidden border-y border-border bg-card px-6 py-12 shadow-[0_-30px_60px_-30px_var(--glow)] md:h-screen md:py-16"
+          className="relative overflow-hidden border-y border-border bg-card px-6 py-20 md:py-28"
         >
-          <div className="mx-auto flex h-full max-w-6xl flex-col justify-center">
+          <div className="mx-auto flex max-w-6xl flex-col">
             <SectionLabel>Principles</SectionLabel>
             <h2 className="mt-5 font-display text-5xl leading-[0.95] md:text-7xl">
               How I think
@@ -392,7 +392,7 @@ function Portfolio() {
         {/* CONNECT */}
         <section
           id="connect"
-          className="stack-animate sticky top-0 z-[60] grid min-h-screen place-items-center overflow-hidden bg-background px-6 py-12 shadow-[0_-30px_60px_-30px_var(--glow)] md:h-screen md:py-16"
+          className="relative grid place-items-center overflow-hidden bg-background px-6 py-24 md:py-36"
         >
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0" />
           <div className="glow-orb orb-drift pointer-events-none absolute size-[600px] opacity-70" />
@@ -416,7 +416,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="relative z-[70] border-t border-border bg-card px-6 py-12 text-center text-xs text-muted-foreground">
+        <footer className="relative border-t border-border bg-card px-6 py-12 text-center text-xs text-muted-foreground">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
