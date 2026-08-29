@@ -98,13 +98,13 @@ function Portfolio() {
 
       <main id="top" className="relative">
         {/* HERO */}
-        <section className="relative overflow-hidden px-6 pt-14 pb-24 sm:pt-20 sm:pb-32 md:pt-24 md:pb-40 lg:pt-28 lg:pb-48">
+        <section className="relative overflow-hidden px-6 pt-20 pb-32 sm:pt-28 sm:pb-40 md:pt-36 md:pb-52 lg:pt-44 lg:pb-64">
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0 -z-10" />
-          <div className="glow-orb orb-drift pointer-events-none absolute -left-40 top-0 -z-10 size-[560px] opacity-70" />
-          <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[420px] opacity-50 [animation-delay:-6s]" />
+          <div className="glow-orb orb-drift pointer-events-none absolute -left-40 top-0 -z-10 size-[620px] opacity-70" />
+          <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[480px] opacity-50 [animation-delay:-6s]" />
 
           <div className="mx-auto max-w-6xl">
-            <Reveal className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
+            <Reveal className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm backdrop-blur">
               <span className="relative grid place-items-center">
                 <span className="size-2 rounded-full bg-[color:var(--success)]" />
                 <span className="pulse-ring absolute size-2 rounded-full bg-[color:var(--success)]" />
@@ -113,7 +113,7 @@ function Portfolio() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="mt-8 font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
+              <h1 className="mt-10 font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
                 <span className="block text-muted-foreground">
                   Hey{"\u00a0"}
                   <Sparkles className="inline-block size-[0.5em] -translate-y-[0.08em]" />
@@ -123,25 +123,25 @@ function Portfolio() {
               </h1>
             </Reveal>
 
-            <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-              <Reveal delay={160} className="max-w-md text-base text-muted-foreground">
+            <div className="mt-14 flex flex-col gap-10 md:flex-row md:items-end md:justify-between lg:mt-16">
+              <Reveal delay={160} className="max-w-lg text-base text-muted-foreground md:text-lg">
                 <p>
                   <span className="font-semibold text-foreground">
                     Welcome to my little corner of the internet.
                   </span>{" "}
                   I'm a lead product designer who finds the signal in the noise — then makes it pretty.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href="#work"
-                    className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-6 py-3 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
+                    className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
                   >
                     View selected work
                     <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
                   </a>
                   <a
                     href="#connect"
-                    className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:bg-secondary active:scale-95"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-medium transition hover:bg-secondary active:scale-95"
                   >
                     Let's talk
                     <ArrowUpRight className="size-4" />
@@ -149,14 +149,14 @@ function Portfolio() {
                 </div>
               </Reveal>
 
-              <Reveal delay={240} className="grid w-full max-w-md grid-cols-2 gap-3 md:w-auto">
+              <Reveal delay={240} className="grid w-full max-w-md grid-cols-2 gap-4 md:w-auto">
                 {stats.map(([v, l]) => (
                   <div
                     key={l}
-                    className="rounded-2xl border border-border bg-card/60 p-4 backdrop-blur transition hover:border-[color:var(--brand)]"
+                    className="rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition hover:border-[color:var(--brand)]"
                   >
-                    <div className="font-display text-2xl md:text-3xl">{v}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{l}</div>
+                    <div className="font-display text-3xl md:text-4xl">{v}</div>
+                    <div className="mt-1 text-sm text-muted-foreground">{l}</div>
                   </div>
                 ))}
               </Reveal>
