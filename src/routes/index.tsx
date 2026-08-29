@@ -123,25 +123,25 @@ function Portfolio() {
               </h1>
             </Reveal>
 
-            <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-              <Reveal delay={160} className="max-w-md text-base text-muted-foreground">
+            <div className="mt-14 flex flex-col gap-10 md:flex-row md:items-end md:justify-between lg:mt-16">
+              <Reveal delay={160} className="max-w-lg text-base text-muted-foreground md:text-lg">
                 <p>
                   <span className="font-semibold text-foreground">
                     Welcome to my little corner of the internet.
                   </span>{" "}
                   I'm a lead product designer who finds the signal in the noise — then makes it pretty.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href="#work"
-                    className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-6 py-3 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
+                    className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
                   >
                     View selected work
                     <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
                   </a>
                   <a
                     href="#connect"
-                    className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:bg-secondary active:scale-95"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-medium transition hover:bg-secondary active:scale-95"
                   >
                     Let's talk
                     <ArrowUpRight className="size-4" />
@@ -149,14 +149,14 @@ function Portfolio() {
                 </div>
               </Reveal>
 
-              <Reveal delay={240} className="grid w-full max-w-md grid-cols-2 gap-3 md:w-auto">
+              <Reveal delay={240} className="grid w-full max-w-md grid-cols-2 gap-4 md:w-auto">
                 {stats.map(([v, l]) => (
                   <div
                     key={l}
-                    className="rounded-2xl border border-border bg-card/60 p-4 backdrop-blur transition hover:border-[color:var(--brand)]"
+                    className="rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition hover:border-[color:var(--brand)]"
                   >
-                    <div className="font-display text-2xl md:text-3xl">{v}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{l}</div>
+                    <div className="font-display text-3xl md:text-4xl">{v}</div>
+                    <div className="mt-1 text-sm text-muted-foreground">{l}</div>
                   </div>
                 ))}
               </Reveal>
