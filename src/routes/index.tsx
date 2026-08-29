@@ -98,13 +98,13 @@ function Portfolio() {
 
       <main id="top" className="relative">
         {/* HERO */}
-        <section className="relative overflow-hidden px-6 pt-14 pb-24 sm:pt-20 sm:pb-32 md:pt-24 md:pb-40 lg:pt-28 lg:pb-48">
+        <section className="relative overflow-hidden px-6 pt-20 pb-32 sm:pt-28 sm:pb-40 md:pt-36 md:pb-52 lg:pt-44 lg:pb-64">
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0 -z-10" />
-          <div className="glow-orb orb-drift pointer-events-none absolute -left-40 top-0 -z-10 size-[560px] opacity-70" />
-          <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[420px] opacity-50 [animation-delay:-6s]" />
+          <div className="glow-orb orb-drift pointer-events-none absolute -left-40 top-0 -z-10 size-[620px] opacity-70" />
+          <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[480px] opacity-50 [animation-delay:-6s]" />
 
           <div className="mx-auto max-w-6xl">
-            <Reveal className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs backdrop-blur">
+            <Reveal className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm backdrop-blur">
               <span className="relative grid place-items-center">
                 <span className="size-2 rounded-full bg-[color:var(--success)]" />
                 <span className="pulse-ring absolute size-2 rounded-full bg-[color:var(--success)]" />
@@ -113,7 +113,7 @@ function Portfolio() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="mt-8 font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
+              <h1 className="mt-10 font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
                 <span className="block text-muted-foreground">
                   Hey{"\u00a0"}
                   <Sparkles className="inline-block size-[0.5em] -translate-y-[0.08em]" />
