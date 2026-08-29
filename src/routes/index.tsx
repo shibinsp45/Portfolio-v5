@@ -104,16 +104,8 @@ function Portfolio() {
           <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[480px] opacity-50 [animation-delay:-6s]" />
 
           <div className="mx-auto max-w-6xl">
-            <Reveal className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm backdrop-blur">
-              <span className="relative grid place-items-center">
-                <span className="size-2 rounded-full bg-[color:var(--success)]" />
-                <span className="pulse-ring absolute size-2 rounded-full bg-[color:var(--success)]" />
-              </span>
-              Open to opportunities · 2026
-            </Reveal>
-
             <Reveal delay={80}>
-              <h1 className="mt-10 font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
+              <h1 className="font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
                 <span className="block text-muted-foreground">
                   Hey{"\u00a0"}
                   <Sparkles className="inline-block size-[0.5em] -translate-y-[0.08em]" />
