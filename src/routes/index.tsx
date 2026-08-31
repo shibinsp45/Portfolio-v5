@@ -4,7 +4,6 @@ import type { ImgHTMLAttributes } from "react";
 import starAsset from "@/assets/star.png.asset.json";
 import about from "@/assets/about.jpg";
 import { Navbar } from "@/components/Navbar";
-import { PageLoader } from "@/components/PageLoader";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { GlowCursor } from "@/components/GlowCursor";
 import { Reveal } from "@/components/Reveal";
@@ -91,7 +90,6 @@ function SectionLabel({ children }: { children: string }) {
 function Portfolio() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
-      <PageLoader />
       <ScrollProgress />
       <GlowCursor />
       <Navbar />
