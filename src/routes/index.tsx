@@ -114,7 +114,7 @@ function Portfolio() {
             </Reveal>
 
             <div className="mt-14 flex flex-col gap-10 md:flex-row md:items-end md:justify-between lg:mt-16">
-              <Reveal delay={160} className="max-w-lg text-base text-muted-foreground md:text-lg">
+              <Reveal delay={160} className="max-w-lg text-center text-base text-muted-foreground md:text-left md:text-lg">
                 <p>
                   <span className="font-semibold text-foreground">
                     Welcome to my little corner of the internet.
