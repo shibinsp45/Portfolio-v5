@@ -103,7 +103,7 @@ function Portfolio() {
 
           <div className="mx-auto max-w-6xl">
             <Reveal delay={80}>
-              <h1 className="font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-[76px] lg:text-[92px]">
+              <h1 className="text-center font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-left md:text-[76px] lg:text-[92px]">
                 <span className="block text-muted-foreground">
                   Hey{"\u00a0"}
                   <Sparkles className="inline-block size-[0.5em] -translate-y-[0.08em]" />
@@ -113,15 +113,15 @@ function Portfolio() {
               </h1>
             </Reveal>
 
-            <div className="mt-14 flex flex-col gap-10 md:flex-row md:items-end md:justify-between lg:mt-16">
-              <Reveal delay={160} className="max-w-lg text-base text-muted-foreground md:text-lg">
+            <div className="mt-14 flex flex-col items-center gap-10 md:flex-row md:items-end md:justify-between lg:mt-16">
+              <Reveal delay={160} className="max-w-lg text-center text-base text-muted-foreground md:text-left md:text-lg">
                 <p>
                   <span className="font-semibold text-foreground">
                     Welcome to my little corner of the internet.
                   </span>{" "}
                   I'm a lead product designer who finds the signal in the noise — then makes it pretty.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
                   <a
                     href="#work"
                     className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
