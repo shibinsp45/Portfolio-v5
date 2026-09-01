@@ -15,7 +15,7 @@ function Sparkles({ className, ...props }: ImgHTMLAttributes<HTMLImageElement>) 
       src={starAsset.url}
       alt=""
       aria-hidden="true"
-      className={`inline-block object-contain mix-blend-multiply dark:invert dark:mix-blend-screen ${className ?? ""}`}
+      className={`inline-block object-contain dark:invert ${className ?? ""}`}
       {...props}
     />
   );
