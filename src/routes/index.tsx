@@ -109,7 +109,7 @@ function Portfolio() {
                   <Sparkles className="inline-block size-[0.5em] -translate-y-[0.08em]" />
                   {"\u00a0"}I'm Shibin S P.
                 </span>
-                <span className="block text-gradient">I'am a Product Designer</span>
+                <span className="block text-gradient">Product Designer</span>
               </h1>
             </Reveal>
 
