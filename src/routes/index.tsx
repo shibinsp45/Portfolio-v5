@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import type { ImgHTMLAttributes } from "react";
-import starAsset from "@/assets/star.png.asset.json";
+import starAsset from "@/assets/star-transparent.png.asset.json";
 import about from "@/assets/about.jpg";
 import { Navbar } from "@/components/Navbar";
 import { ScrollProgress } from "@/components/ScrollProgress";
