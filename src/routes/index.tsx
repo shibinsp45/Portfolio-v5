@@ -104,12 +104,12 @@ function Portfolio() {
           <div className="mx-auto max-w-6xl">
             <Reveal delay={80}>
               <h1 className="text-center font-display text-[38px] leading-[1.02] tracking-[-0.04em] sm:text-[56px] md:text-left md:text-[76px] lg:text-[92px]">
-                <span className="block text-muted-foreground">
-                  Hey{"\u00a0"}
+                <span className="block text-muted-foreground">hey,</span>
+                <span className="block text-foreground">
+                  im shibin s p{"\u00a0"}
                   <Sparkles className="inline-block size-[0.5em] -translate-y-[0.08em]" />
-                  {"\u00a0"}I'm Shibin S P.
                 </span>
-                <span className="block text-gradient">Product Designer</span>
+                <span className="block text-gradient">product designer</span>
               </h1>
             </Reveal>
 
