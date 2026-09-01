@@ -121,7 +121,7 @@ function Portfolio() {
                   </span>{" "}
                   I'm a lead product designer who finds the signal in the noise — then makes it pretty.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
                   <a
                     href="#work"
                     className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
