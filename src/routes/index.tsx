@@ -8,6 +8,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { GlowCursor } from "@/components/GlowCursor";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
 
 function Sparkles({ className, ...props }: ImgHTMLAttributes<HTMLImageElement>) {
   return (
@@ -185,64 +186,7 @@ function Portfolio() {
         </div>
 
         {/* FEATURED WORK */}
-        <section
-          id="work"
-          className="relative overflow-hidden bg-background px-6 py-20 md:py-28"
-        >
-          <div className="mx-auto flex max-w-6xl flex-col">
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <div>
-                <SectionLabel>Selected work</SectionLabel>
-                <h2 className="mt-4 font-display text-4xl md:text-5xl">
-                  My Featured Projects <Sparkles className="inline size-[0.45em]" />
-                </h2>
-              </div>
-              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                06 case studies
-              </span>
-            </div>
-
-            <div className="mt-8 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-3 md:gap-5">
-              {projects.map((p, i) => (
-                <Reveal key={p.title} delay={i * 70} className="flex">
-                  <TiltCard className="group flex w-full flex-col">
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-1 flex-col"
-                    >
-                      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card transition duration-500 group-hover:border-[color:var(--brand)] group-hover:brand-glow">
-                        <img
-                          src={p.img}
-                          alt={p.title}
-                          loading="lazy"
-                          className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.07]"
-                        />
-                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(300px_circle_at_var(--mx,50%)_var(--my,50%),var(--glow),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                        <div className="pointer-events-none absolute inset-x-0 top-0 h-16 shimmer opacity-0 transition-opacity duration-500 group-hover:opacity-30" />
-                        <span className="absolute left-3 top-3 rounded-full border border-border/60 bg-background/70 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] backdrop-blur">
-                          {p.kind}
-                        </span>
-                      </div>
-                      <div className="mt-3 flex items-start justify-between gap-3">
-                        <div>
-                          <h3 className="font-display text-base leading-tight md:text-lg">
-                            {p.title}
-                          </h3>
-                          <p className="mt-0.5 line-clamp-1 text-xs text-muted-foreground md:text-sm">
-                            {p.tag}
-                          </p>
-                        </div>
-                        <ArrowUpRight className="mt-0.5 size-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 md:size-4" />
-                      </div>
-                    </a>
-                  </TiltCard>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FeaturedProjects projects={projects} />
 
         {/* ABOUT */}
         <section
