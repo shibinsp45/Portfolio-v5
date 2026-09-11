@@ -129,14 +129,14 @@ function Portfolio() {
                 <div className="mt-8 flex flex-nowrap items-center justify-center gap-3 md:justify-start">
                   <a
                     href="#work"
-                    className="group inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-6 py-3.5 text-sm font-semibold text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
+                    className="hover-sheen group inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-6 py-3.5 text-sm font-semibold text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
                   >
                     View selected work
                     <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
                   </a>
                   <a
                     href="#connect"
-                    className="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full border border-border bg-card/40 px-6 py-3.5 text-sm font-semibold transition hover:bg-secondary active:scale-95"
+                    className="hover-sheen inline-flex items-center gap-2.5 whitespace-nowrap rounded-full border border-border bg-card/40 px-6 py-3.5 text-sm font-semibold transition hover:bg-secondary active:scale-95"
                   >
                     Let's talk
                     <ArrowUpRight className="size-4" />
@@ -148,7 +148,7 @@ function Portfolio() {
                 {stats.map(([v, l]) => (
                   <div
                     key={l}
-                    className="rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition hover:border-[color:var(--brand)]"
+                    className="hover-sheen rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition hover:border-[color:var(--brand)]"
                   >
                     <div className="font-display text-3xl md:text-4xl">{v}</div>
                     <div className="mt-1 text-sm text-muted-foreground">{l}</div>
@@ -214,8 +214,8 @@ function Portfolio() {
                   />
                 </TiltCard>
                 <div className="flex gap-3">
-                  <a href="#" className="rounded-full border border-border px-4 py-2 text-sm transition hover:border-[color:var(--brand)] hover:text-foreground">Dribbble</a>
-                  <a href="#" className="rounded-full border border-border px-4 py-2 text-sm transition hover:border-[color:var(--brand)] hover:text-foreground">LinkedIn</a>
+                  <a href="#" className="hover-sheen rounded-full border border-border px-4 py-2 text-sm transition hover:border-[color:var(--brand)] hover:text-foreground">Dribbble</a>
+                  <a href="#" className="hover-sheen rounded-full border border-border px-4 py-2 text-sm transition hover:border-[color:var(--brand)] hover:text-foreground">LinkedIn</a>
                 </div>
               </div>
 
@@ -271,7 +271,7 @@ function Portfolio() {
                   {tools.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border border-border bg-card px-4 py-2 text-sm transition hover:-translate-y-0.5 hover:border-[color:var(--brand)]"
+                      className="hover-sheen rounded-full border border-border bg-card px-4 py-2 text-sm transition hover:-translate-y-0.5 hover:border-[color:var(--brand)]"
                     >
                       {t}
                     </span>
@@ -286,7 +286,7 @@ function Portfolio() {
                   {services.map((s) => (
                     <span
                       key={s}
-                      className="rounded-full bg-[color:var(--brand)] px-4 py-2 text-sm text-[color:var(--primary-foreground)] transition hover:-translate-y-0.5 hover:brightness-110 dark:text-[color:var(--accent-foreground)]"
+                      className="hover-sheen rounded-full bg-[color:var(--brand)] px-4 py-2 text-sm text-[color:var(--primary-foreground)] transition hover:-translate-y-0.5 hover:brightness-110 dark:text-[color:var(--accent-foreground)]"
                     >
                       {s}
                     </span>
@@ -312,7 +312,7 @@ function Portfolio() {
             <div className="mt-12 grid gap-x-12 gap-y-8 md:grid-cols-2">
               {principles.map((p, i) => (
                 <Reveal key={p.n} delay={i * 60}>
-                  <div className="group flex gap-5 rounded-2xl border border-transparent p-3 transition hover:border-border hover:bg-background/40">
+                  <div className="hover-sheen group flex gap-5 rounded-2xl border border-transparent p-3 transition hover:border-border hover:bg-background/40">
                     <div className="font-display text-3xl tabular-nums text-muted-foreground transition group-hover:text-[color:var(--brand)]">
                       {p.n}
                     </div>
@@ -346,7 +346,7 @@ function Portfolio() {
             </p>
             <a
               href="#"
-              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
+              className="hover-sheen group mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
             >
               Connect on LinkedIn
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
