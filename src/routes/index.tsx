@@ -126,17 +126,17 @@ function Portfolio() {
                   </span>{" "}
                   I'm a lead product designer who finds the signal in the noise — then makes it pretty.
                 </p>
-                <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+                <div className="mt-8 flex flex-nowrap items-center justify-center gap-3 md:justify-start">
                   <a
                     href="#work"
-                    className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand)] px-7 py-3.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
+                    className="group inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-6 py-3.5 text-sm font-semibold text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
                   >
                     View selected work
                     <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
                   </a>
                   <a
                     href="#connect"
-                    className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-medium transition hover:bg-secondary active:scale-95"
+                    className="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full border border-border bg-card/40 px-6 py-3.5 text-sm font-semibold transition hover:bg-secondary active:scale-95"
                   >
                     Let's talk
                     <ArrowUpRight className="size-4" />
