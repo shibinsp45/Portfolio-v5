@@ -19,7 +19,7 @@ function Card({ p, index }: { p: Project; index: number }) {
       href={p.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block h-full rounded-[2rem] border border-border/30 bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--pop)] md:p-6"
+      className="hover-sheen group block h-full rounded-[2rem] border border-border/30 bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--pop)] md:p-6"
     >
       <div
         className={`relative aspect-[4/3] overflow-hidden rounded-[1.5rem] ${
