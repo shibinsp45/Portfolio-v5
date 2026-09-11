@@ -91,7 +91,7 @@ function SectionLabel({ children }: { children: string }) {
 
 function Portfolio() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen text-foreground">
       <ScrollProgress />
       <GlowCursor />
       <Navbar />
@@ -160,7 +160,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="relative grid place-items-center overflow-hidden border-y border-border bg-card py-20 md:py-28">
+        <div className="relative grid place-items-center overflow-hidden border-y border-border bg-card/50 py-20 backdrop-blur-sm md:py-28">
           <div className="grid-bg absolute inset-0 opacity-50" />
           <div className="relative flex w-full flex-col gap-8">
             <div className="px-6 text-center">
@@ -194,7 +194,7 @@ function Portfolio() {
         {/* ABOUT */}
         <section
           id="about"
-          className="relative overflow-hidden border-y border-border bg-card px-6 py-20 md:py-28"
+          className="relative overflow-hidden border-y border-border bg-card/50 px-6 py-20 backdrop-blur-sm md:py-28"
         >
           <div className="mx-auto flex max-w-6xl flex-col">
             <div className="grid gap-6 md:grid-cols-2 md:gap-12">
@@ -251,7 +251,7 @@ function Portfolio() {
         {/* PROCESS / TOOLS */}
         <section
           id="process"
-          className="relative overflow-hidden bg-background px-6 py-20 md:py-28"
+          className="relative overflow-hidden px-6 py-20 md:py-28"
         >
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0 opacity-70" />
           <div className="relative mx-auto flex max-w-6xl flex-col">
@@ -300,7 +300,7 @@ function Portfolio() {
         {/* PRINCIPLES */}
         <section
           id="principles"
-          className="relative overflow-hidden border-y border-border bg-card px-6 py-20 md:py-28"
+          className="relative overflow-hidden border-y border-border bg-card/50 px-6 py-20 backdrop-blur-sm md:py-28"
         >
           <div className="mx-auto flex max-w-6xl flex-col">
             <SectionLabel>Principles</SectionLabel>
@@ -330,7 +330,7 @@ function Portfolio() {
         {/* CONNECT */}
         <section
           id="connect"
-          className="relative grid place-items-center overflow-hidden bg-background px-6 py-24 md:py-36"
+          className="relative grid place-items-center overflow-hidden px-6 py-24 md:py-36"
         >
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0" />
           <div className="glow-orb orb-drift pointer-events-none absolute size-[600px] opacity-70" />
@@ -354,7 +354,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="relative border-t border-border bg-card px-6 py-12 text-center text-xs text-muted-foreground">
+        <footer className="relative border-t border-border bg-card/50 px-6 py-12 text-center text-xs text-muted-foreground backdrop-blur-sm">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
