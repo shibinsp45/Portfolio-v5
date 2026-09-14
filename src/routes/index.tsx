@@ -160,28 +160,17 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="relative grid place-items-center overflow-hidden border-y border-border bg-card/50 py-20 backdrop-blur-sm md:py-28">
+        <div className="relative grid place-items-center overflow-hidden border-y border-border bg-card/50 py-14 backdrop-blur-sm md:py-20">
           <div className="grid-bg absolute inset-0 opacity-50" />
-          <div className="relative flex w-full flex-col gap-8">
+          <div className="relative flex w-full flex-col gap-6">
             <div className="px-6 text-center">
               <SectionLabel>Off the clock</SectionLabel>
-              <h2 className="mt-4 font-display text-3xl md:text-5xl">
-                When I'm not designing, I'm probably…
-              </h2>
             </div>
-            <div className="marquee text-sm font-medium tracking-[0.2em] text-muted-foreground">
-              {[...marqueeItems, ...marqueeItems].map((item, i) => (
-                <span key={i} className="flex items-center gap-12 whitespace-nowrap">
+            <div className="marquee text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground md:text-sm">
+              {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+                <span key={i} className="flex items-center gap-10 whitespace-nowrap md:gap-16">
                   {item}
-                  <Sparkles className="size-3.5" />
-                </span>
-              ))}
-            </div>
-            <div className="marquee marquee-reverse text-sm font-medium tracking-[0.2em] text-muted-foreground/60">
-              {[...marqueeItems, ...marqueeItems].map((item, i) => (
-                <span key={i} className="flex items-center gap-12 whitespace-nowrap">
-                  {item}
-                  <Sparkles className="size-3.5" />
+                  <Sparkles className="size-3" />
                 </span>
               ))}
             </div>
