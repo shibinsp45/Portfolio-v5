@@ -164,7 +164,7 @@ function Portfolio() {
           <div className="grid-bg absolute inset-0 opacity-50" />
           <div className="relative flex w-full flex-col gap-6">
             <div className="px-6 text-center">
-              <SectionLabel>Off the clock</SectionLabel>
+              <SectionLabel>{"\n"}</SectionLabel>
             </div>
             <div className="marquee text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground md:text-sm">
               {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
