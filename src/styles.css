@@ -216,7 +216,7 @@
 
   .marquee {
     display: flex;
-    gap: 3rem;
+    gap: 1.25rem;
     animation: marquee 38s linear infinite;
     width: max-content;
   }
