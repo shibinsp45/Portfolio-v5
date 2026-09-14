@@ -160,7 +160,7 @@ function Portfolio() {
         </section>
 
         {/* MARQUEE */}
-        <div className="relative grid place-items-center overflow-hidden border-y border-border bg-card/50 py-8 backdrop-blur-sm md:py-10">
+        <div className="relative grid place-items-center overflow-hidden py-8 md:py-10">
           <div className="grid-bg absolute inset-0 opacity-50" />
           <div className="marquee text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground md:text-sm">
             {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
@@ -178,7 +178,7 @@ function Portfolio() {
         {/* ABOUT */}
         <section
           id="about"
-          className="relative overflow-hidden border-y border-border bg-card/50 px-6 py-20 backdrop-blur-sm md:py-28"
+          className="relative overflow-hidden px-6 py-20 md:py-28"
         >
           <div className="mx-auto flex max-w-6xl flex-col">
             <div className="grid gap-6 md:grid-cols-2 md:gap-12">
@@ -284,7 +284,7 @@ function Portfolio() {
         {/* PRINCIPLES */}
         <section
           id="principles"
-          className="relative overflow-hidden border-y border-border bg-card/50 px-6 py-20 backdrop-blur-sm md:py-28"
+          className="relative overflow-hidden px-6 py-20 md:py-28"
         >
           <div className="mx-auto flex max-w-6xl flex-col">
             <SectionLabel>Principles</SectionLabel>
@@ -338,7 +338,7 @@ function Portfolio() {
           </div>
         </section>
 
-        <footer className="relative border-t border-border bg-card/50 px-6 py-12 text-center text-xs text-muted-foreground backdrop-blur-sm">
+        <footer className="relative px-6 py-12 text-center text-xs text-muted-foreground">
           Designed with intention · © 2026 Shibin SP
         </footer>
       </main>
