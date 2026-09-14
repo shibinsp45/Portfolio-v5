@@ -19,7 +19,7 @@ function Card({ p, index }: { p: Project; index: number }) {
       href={p.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover-sheen group block h-full rounded-[2rem] border border-border/30 bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--pop)] md:p-6"
+      className="hover-sheen group block h-full rounded-[2rem] border border-border/30 bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6"
     >
       <div
         className={`relative aspect-[4/3] overflow-hidden rounded-[1.5rem] ${
@@ -47,7 +47,7 @@ function Card({ p, index }: { p: Project; index: number }) {
           {p.title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-[15px]">{p.tag}</p>
-        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--pop)]">
+        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--pop)] transition-colors duration-300 group-hover:text-[color:var(--electric)]">
           Peek inside
           <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </span>
