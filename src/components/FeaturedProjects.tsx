@@ -19,7 +19,7 @@ function Card({ p, index }: { p: Project; index: number }) {
       href={p.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover-sheen group block h-full rounded-[2rem] border border-border/30 bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--pop)] md:p-6"
+      className="hover-sheen group block h-full rounded-[2rem] border border-border/30 bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6"
     >
       <div
         className={`relative aspect-[4/3] overflow-hidden rounded-[1.5rem] ${
@@ -47,7 +47,7 @@ function Card({ p, index }: { p: Project; index: number }) {
           {p.title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-[15px]">{p.tag}</p>
-        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--pop)]">
+        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--pop)] transition-colors duration-300 group-hover:text-[color:var(--electric)]">
           Peek inside
           <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </span>
@@ -61,27 +61,12 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
   return (
     <section
       id="work"
-      className="relative overflow-hidden px-6 py-14 md:py-20"
+      className="relative overflow-hidden px-6 py-10 md:py-14"
       style={{ background: "var(--projects-bg)" }}
     >
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-muted-foreground">
-              <span className="size-1.5 rounded-full bg-[color:var(--pop)]" />
-              Selected work
-            </div>
-            <h2 className="mt-4 font-display text-4xl font-extrabold tracking-[-0.045em] md:text-6xl">
-              My Featured Projects
-            </h2>
-          </div>
-          <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            {String(projects.length).padStart(2, "0")} case studies
-          </span>
-        </div>
-
         {/* Desktop: 2-column grid */}
-        <div className="mt-10 hidden gap-6 md:grid md:grid-cols-2">
+        <div className="hidden gap-6 md:grid md:grid-cols-2">
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
@@ -97,7 +82,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
         </div>
 
         {/* Mobile: sticky parallax stack */}
-        <div className="mt-8 md:hidden">
+        <div className="md:hidden">
           {projects.map((p, i) => (
             <div
               key={p.title}
