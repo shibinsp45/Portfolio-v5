@@ -150,7 +150,7 @@ function Portfolio() {
                     key={l}
                     className="hover-sheen rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition hover:border-[color:var(--brand)]"
                   >
-                    <div className="font-display text-3xl md:text-4xl">{v}</div>
+                    <div className="font-display text-4xl md:text-5xl">{v}</div>
                     <div className="mt-1 text-sm text-muted-foreground">{l}</div>
                   </div>
                 ))}
