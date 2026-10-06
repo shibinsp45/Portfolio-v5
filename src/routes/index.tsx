@@ -73,12 +73,6 @@ const principles = [
   { n: "06", t: "Question the new shiny thing", d: "Every quarter there's a trend promising to change everything. The work that ages well comes from fundamentals, not fashion." },
 ];
 const marqueeItems = ["TUNING MY SUPERBIKE", "ON A WAFFLE DATE", "ORGANIZING FILES", "LISTENING TO LINKIN PARK", "EXPLORING BALI", "VIBE CODING", "MAKING COFFEE"];
-const stats = [
-  ["10+", "Years designing"],
-  ["40+", "Products shipped"],
-  ["6", "Featured case studies"],
-  ["∞", "Iterations"],
-];
 
 function SectionLabel({ children }: { children: string }) {
   return (
@@ -144,17 +138,6 @@ function Portfolio() {
                 </div>
               </Reveal>
 
-              <Reveal delay={240} className="grid w-full max-w-md grid-cols-2 gap-4 md:w-auto">
-                {stats.map(([v, l]) => (
-                  <div
-                    key={l}
-                    className="hover-sheen rounded-2xl bg-card/60 p-5 backdrop-blur transition"
-                  >
-                    <div className="font-display text-4xl md:text-5xl">{v}</div>
-                    <div className="mt-1 text-sm text-muted-foreground">{l}</div>
-                  </div>
-                ))}
-              </Reveal>
             </div>
           </div>
         </section>
