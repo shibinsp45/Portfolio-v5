@@ -13,13 +13,13 @@ export type Project = {
 
 const spring = { type: "spring" as const, stiffness: 90, damping: 18, mass: 0.9 };
 
-function Card({ p, index }: { p: Project; index: number }) {
+function Card({ p, index, stacked = false }: { p: Project; index: number; stacked?: boolean }) {
   return (
     <a
       href={p.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover-sheen group block h-full rounded-[2rem] bg-card/50 p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6"
+      className={`hover-sheen group block h-full rounded-[2rem] ${stacked ? "bg-background" : "bg-card/50"} p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6`}
     >
       <div
         className={`relative aspect-[4/3] overflow-hidden rounded-[1.5rem] ${
@@ -61,7 +61,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
   return (
     <section
       id="work"
-      className="relative overflow-hidden px-6 py-10 md:py-14"
+      className="relative overflow-x-clip px-6 py-10 md:py-14"
       style={{ background: "var(--projects-bg)" }}
     >
       <div className="mx-auto max-w-6xl">
@@ -86,8 +86,8 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
           {projects.map((p, i) => (
             <div
               key={p.title}
-              className="sticky top-24 pb-6"
-              style={{ zIndex: i + 1 }}
+              className="sticky pb-6"
+              style={{ top: `calc(6rem + ${i * 16}px)`, zIndex: i + 1 }}
             >
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -96,7 +96,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                 transition={spring}
                 className="rounded-[2rem] bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
               >
-                <Card p={p} index={i} />
+                <Card p={p} index={i} stacked />
               </motion.div>
             </div>
           ))}
