@@ -86,8 +86,8 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
           {projects.map((p, i) => (
             <div
               key={p.title}
-              className="sticky top-24 pb-6"
-              style={{ zIndex: i + 1 }}
+              className="sticky pb-6"
+              style={{ top: `calc(6rem + ${i * 16}px)`, zIndex: i + 1 }}
             >
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
