@@ -61,7 +61,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
   return (
     <section
       id="work"
-      className="relative overflow-hidden px-6 py-10 md:py-14"
+      className="relative overflow-x-clip px-6 py-10 md:py-14"
       style={{ background: "var(--projects-bg)" }}
     >
       <div className="mx-auto max-w-6xl">
