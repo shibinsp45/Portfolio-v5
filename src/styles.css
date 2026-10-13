@@ -57,7 +57,7 @@
   --accent-foreground: oklch(0.99 0.002 250);
   --brand: oklch(0.55 0.21 262);
   --brand-soft: oklch(0.72 0.14 250);
-  --pop: hsl(22 100% 55%);
+  --pop: var(--foreground);
   --electric: hsl(215 100% 60%);
   --projects-bg: linear-gradient(180deg, hsl(215 100% 97% / 0.85), transparent);
   --page-gradient: radial-gradient(130% 100% at 18% -10%, hsl(215 90% 94%), hsl(0 0% 100%) 55%);
@@ -92,7 +92,7 @@
   --accent-foreground: oklch(0.11 0.012 260);
   --brand: oklch(0.65 0.19 258);
   --brand-soft: oklch(0.78 0.13 245);
-  --pop: hsl(22 100% 55%);
+  --pop: var(--foreground);
   --electric: hsl(215 100% 60%);
   --projects-bg: linear-gradient(180deg, hsl(222 55% 12% / 0.55), transparent);
   --page-gradient: radial-gradient(130% 100% at 18% -12%, hsl(222 60% 15%), hsl(228 45% 5%) 55%, hsl(230 40% 3%));
