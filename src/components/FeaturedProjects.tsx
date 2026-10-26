@@ -19,10 +19,10 @@ function Card({ p, index, stacked = false }: { p: Project; index: number; stacke
       href={p.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`hover-sheen group block h-full rounded-[2rem] ${stacked ? "bg-background" : "bg-card/50"} p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6`}
+      className={`hover-sheen group block h-full rounded-3xl ${stacked ? "bg-background" : "bg-card/50"} p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6`}
     >
       <div
-        className={`relative aspect-[4/3] overflow-hidden rounded-[1.5rem] ${
+        className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${
           p.contain ? "bg-secondary p-8" : "bg-secondary"
         }`}
       >
@@ -94,7 +94,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={spring}
-                className="rounded-[2rem] bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
+                className="rounded-3xl bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
               >
                 <Card p={p} index={i} stacked />
               </motion.div>
