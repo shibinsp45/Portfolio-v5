@@ -19,7 +19,7 @@ function Card({ p, index, stacked = false }: { p: Project; index: number; stacke
       href={p.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`hover-sheen group block h-full rounded-3xl ${stacked ? "bg-background" : "bg-card/50"} p-4 backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)] md:p-6`}
+      className={`hover-sheen group block h-full rounded-3xl ${stacked ? "bg-background" : "bg-card/50"} backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)]`}
     >
       <div
         className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${
