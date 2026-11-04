@@ -92,10 +92,10 @@ function Portfolio() {
 
       <main id="top" className="relative">
         {/* HERO */}
-        <section className="relative overflow-hidden px-6 pt-20 pb-32 sm:pt-28 sm:pb-40 md:pt-36 md:pb-52 lg:pt-44 lg:pb-64">
+        <section className="relative overflow-hidden px-5 pt-16 pb-20 sm:px-6 sm:pt-28 sm:pb-40 md:pt-36 md:pb-52 lg:pt-44 lg:pb-64">
           <div className="grid-bg mask-fade pointer-events-none absolute inset-0 -z-10" />
-          <div className="glow-orb orb-drift pointer-events-none absolute -left-40 top-0 -z-10 size-[620px] opacity-70" />
-          <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[480px] opacity-50 [animation-delay:-6s]" />
+          <div className="glow-orb orb-drift pointer-events-none absolute -left-40 top-0 -z-10 size-[420px] opacity-70 sm:size-[620px]" />
+          <div className="glow-orb orb-drift pointer-events-none absolute -right-32 top-40 -z-10 size-[360px] opacity-50 [animation-delay:-6s] sm:size-[480px]" />
 
           <div className="mx-auto max-w-6xl">
             <Reveal delay={80}>
@@ -112,7 +112,7 @@ function Portfolio() {
               </h1>
             </Reveal>
 
-            <div className="mt-14 flex flex-col items-center gap-10 md:flex-row md:items-end md:justify-between lg:mt-16">
+            <div className="mt-9 flex flex-col items-center gap-8 sm:mt-12 md:flex-row md:items-end md:justify-between lg:mt-16">
               <Reveal delay={160} className="max-w-lg text-center text-base text-muted-foreground md:text-left md:text-lg">
                 <p>
                   <span className="font-semibold text-foreground">
@@ -120,7 +120,7 @@ function Portfolio() {
                   </span>{" "}
                   I'm a lead product designer who finds the signal in the noise — then makes it pretty.
                 </p>
-                <div className="mt-8 flex flex-nowrap items-center justify-center gap-3 md:justify-start">
+                <div className="mt-7 flex flex-nowrap items-center justify-center gap-3 md:justify-start sm:mt-8">
                   <a
                     href="#work"
                     className="hover-sheen group inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-6 py-3.5 text-sm font-semibold text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
