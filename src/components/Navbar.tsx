@@ -42,13 +42,13 @@ export function Navbar() {
   const collapsed = scrolled && !hovered;
 
   return (
-    <header className="sticky top-4 z-50 px-4">
+    <header className="sticky top-3 z-50 px-3 sm:top-4 sm:px-4">
       <nav
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onFocus={() => setHovered(true)}
         onBlur={() => setHovered(false)}
-        className={`glass mx-auto flex items-center justify-between gap-3 rounded-full border border-border/70 py-2 shadow-[0_12px_40px_-18px_var(--glow)] transition-all duration-500 ease-out ${
+        className={`glass mx-auto flex items-center justify-between gap-3 rounded-full border border-border/70 py-1.5 shadow-[0_12px_40px_-18px_var(--glow)] transition-all duration-500 ease-out sm:py-2 ${
           collapsed ? "max-w-[220px] px-2" : "max-w-3xl px-3"
         }`}
       >
@@ -97,7 +97,7 @@ export function Navbar() {
           </div>
           <a
             href="#connect"
-            className="group inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-4 py-1.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 dark:text-[color:var(--accent-foreground)]"
+            className="group inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-[color:var(--brand)] px-3.5 py-1.5 text-sm font-medium text-[color:var(--primary-foreground)] transition hover:brightness-110 active:scale-95 sm:px-4 dark:text-[color:var(--accent-foreground)]"
           >
             Connect
             <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
