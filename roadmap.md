@@ -1,0 +1,1 @@
+- [ ] Find and install Impeccable as a personal chat skill, then confirm it is available.
