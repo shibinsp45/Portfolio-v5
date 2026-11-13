@@ -1,3 +1,0 @@
-- [ ] Remove the category/year labels shown on project cards and make card corners more rectangular.
-- [ ] Add internal detail pages for each featured project and connect card clicks to them.
-- [ ] Verify the desktop and mobile card/navigation flow.
