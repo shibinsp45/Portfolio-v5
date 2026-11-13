@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, useRouter, type ErrorComponentProps } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { getProjectBySlug, projects } from "@/lib/projects";
 
@@ -8,10 +8,11 @@ export const Route = createFileRoute("/project/$slug")({
     if (!project) throw notFound();
     return project;
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     const title = loaderData ? `${loaderData.title} — Shibin SP` : "Project — Shibin SP";
     const description = loaderData?.tag ?? "A selected product design project by Shibin SP.";
     const image = loaderData?.img;
+    const canonical = `https://shibinsp045.lovable.app/project/${params.slug}`;
 
     return {
       meta: [
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/project/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:type", content: "article" },
+        { property: "og:url", content: canonical },
         { name: "twitter:card", content: "summary_large_image" },
         ...(image
           ? [
@@ -28,6 +30,7 @@ export const Route = createFileRoute("/project/$slug")({
             ]
           : []),
       ],
+      links: [{ rel: "canonical", href: canonical }],
     };
   },
   component: ProjectPage,
@@ -61,7 +64,7 @@ function ProjectPage() {
           </p>
         </header>
 
-        <div className="overflow-hidden rounded-xl bg-secondary">
+        <div className="overflow-hidden rounded-project bg-secondary">
           <img
             src={project.img}
             alt={project.title}
@@ -126,12 +129,21 @@ function ProjectNotFound() {
   );
 }
 
-function ProjectError({ reset }: { reset: () => void }) {
+function ProjectError({ reset }: ErrorComponentProps) {
+  const router = useRouter();
+
   return (
     <main className="grid min-h-screen place-items-center px-5 text-center text-foreground">
       <div>
         <h1 className="font-display text-3xl">This project didn’t load</h1>
-        <button type="button" onClick={reset} className="mt-5 text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground">
+        <button
+          type="button"
+          onClick={() => {
+            router.invalidate();
+            reset();
+          }}
+          className="mt-5 text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+        >
           Try again
         </button>
       </div>

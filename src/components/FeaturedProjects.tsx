@@ -10,10 +10,10 @@ function Card({ p, index, stacked = false }: { p: Project; index: number; stacke
     <Link
       to="/project/$slug"
       params={{ slug: p.slug }}
-      className={`hover-sheen group block h-full rounded-xl ${stacked ? "bg-background" : "bg-card/50"} backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)]`}
+      className={`hover-sheen group block h-full rounded-project ${stacked ? "bg-background" : "bg-card/50"} backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)]`}
     >
       <div
-        className={`relative aspect-[4/3] overflow-hidden rounded-lg ${
+        className={`relative aspect-[4/3] overflow-hidden rounded-project ${
           p.contain ? "bg-secondary p-8" : "bg-secondary"
         }`}
       >
@@ -82,7 +82,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={spring}
-                className="rounded-xl bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
+                className="rounded-project bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
               >
                 <Card p={p} index={i} stacked />
               </motion.div>
