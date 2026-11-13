@@ -1,28 +1,19 @@
+import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-
-export type Project = {
-  img: string;
-  href: string;
-  title: string;
-  tag: string;
-  year: string;
-  kind: string;
-  contain?: boolean;
-};
+import type { Project } from "@/lib/projects";
 
 const spring = { type: "spring" as const, stiffness: 90, damping: 18, mass: 0.9 };
 
 function Card({ p, index, stacked = false }: { p: Project; index: number; stacked?: boolean }) {
   return (
-    <a
-      href={p.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`hover-sheen group block h-full rounded-3xl ${stacked ? "bg-background" : "bg-card/50"} backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)]`}
+    <Link
+      to="/project/$slug"
+      params={{ slug: p.slug }}
+      className={`hover-sheen group block h-full rounded-xl ${stacked ? "bg-background" : "bg-card/50"} backdrop-blur-2xl transition duration-500 hover:border-[color:var(--electric)]`}
     >
       <div
-        className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${
+        className={`relative aspect-[4/3] overflow-hidden rounded-lg ${
           p.contain ? "bg-secondary p-8" : "bg-secondary"
         }`}
       >
@@ -34,9 +25,6 @@ function Card({ p, index, stacked = false }: { p: Project; index: number; stacke
             p.contain ? "object-contain" : "object-cover"
           }`}
         />
-        <span className="absolute left-3 top-3 rounded-full border border-border/40 bg-background/70 px-3 py-1 text-[10px] uppercase tracking-[0.2em] backdrop-blur">
-          {p.kind}
-        </span>
         <span className="absolute right-3 top-3 rounded-full bg-[color:var(--electric)] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-white">
           {p.year}
         </span>
@@ -53,7 +41,7 @@ function Card({ p, index, stacked = false }: { p: Project; index: number; stacke
         </span>
       </div>
       <span className="sr-only">{index}</span>
-    </a>
+    </Link>
   );
 }
 
@@ -94,7 +82,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={spring}
-                className="rounded-3xl bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
+                className="rounded-xl bg-background shadow-[0_-8px_40px_-12px_rgba(0,0,0,0.35)]"
               >
                 <Card p={p} index={i} stacked />
               </motion.div>

@@ -1,0 +1,1 @@
+- Keep featured projects in one shared data module and render their inner pages through a slug-based route so project content and navigation stay consistent.
